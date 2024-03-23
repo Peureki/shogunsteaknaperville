@@ -16,9 +16,6 @@
             </ul>
             
             <button class="cta">
-                <svg class="cta-circle" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="100" height="100" rx="50" fill="#DB0505"/>
-                </svg>
                 <div class="cta-phone-container">
                     <NuxtLink to="/">Call to Reserve</NuxtLink> 
                     <NuxtLink to="/" class="phone">630-416-0871</NuxtLink>
@@ -30,15 +27,19 @@
 </template>
 
 <style scoped>
-header {
-    margin-inline: var(--margin-page);
-    margin-top: 50px; 
-    margin-bottom: 50px;
-}
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--clr-bkg);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid var(--clr-border-fade);
+    padding-inline: var(--padding-page);
+    padding-block: 10px;
+    z-index: 1000;
 }
 ul {
     list-style: none;
@@ -56,9 +57,16 @@ li {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    position: relative;
 }
 .cta-phone-container > .phone {
     font-size: var(--font-size-p);
+}
+.phone {
+    position: absolute;
+    bottom: -50%;
+    transform: translateY(50%);
+
 }
 
 
