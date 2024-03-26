@@ -26,8 +26,8 @@ const props = defineProps({
     top: 30%;
     left: 50%;
     transform: translate(-50%, -30%);
-    width: 92%;
-    height: 85%;
+    width: 95%;
+    height: 90%;
     object-fit: cover;
 }
 

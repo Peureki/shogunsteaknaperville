@@ -25,12 +25,31 @@ html, body{
     height: 100%;
 }
 
+h1, h2, h3, h4, h5{
+    color: var(--clr-text);
+    margin: 0;
+}
+
 
 h1 {
-    color: var(--clr-text);
     font-family: var(--font-family-archivo);
     font-size: var(--font-size-h1);
     font-weight: var(--font-weight-archivo);
+}
+h4{
+    font-weight: 300;
+    font-family: var(--font-family-hind-vadodara); 
+    font-size: var(--font-size-h4);
+}
+h5{
+    font-family: var(--font-family-hind-vadodara);
+    font-weight: 300;
+    font-size: var(--font-size-h5)
+}
+p{
+    font-family: var(--font-family-karla);
+    font-size: var(--font-size-p);
+    color: var(--clr-faded-text);
     margin: 0;
 }
 
@@ -93,6 +112,44 @@ a {
     height: 100%;
     border-radius: 50px;
 }
+/* 
+ *
+ * TEXT LOGO
+ * SHO [circle] GUN
+ * DYNAMICALLY CHANGE THE SIZE OF THE 'S' [circle] AND THE REST OF THE LETTERS BASED ON VW
+ *
+ */
+span.logo-container{
+    display: flex;
+    grid-area: logo;
+}
+span.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+span.title-container{
+    display: flex;
+    align-items: center;
+    line-height: 0.7;
+}
+.title-s-container{
+    display: flex;
+    align-items: center;
+}
+.title-s{
+    font-size: var(--font-size-h1-s);
+    padding-bottom: var(--padding-h1-s);
+}
+.title-circle{
+    width: var(--font-size-logo-circle);
+    height: var(--font-size-logo-circle);
+    background-color: var(--clr-primary);
+    margin-top: var(--margin-top-logo-circle);
+    margin-inline: var(--margin-inline-logo-circle);
+    border-radius: 50%;
+}
 
 :root{
     --clr-bkg: #171314; 
@@ -100,20 +157,36 @@ a {
     --clr-primary: #DB0505; 
     --clr-secondary: #FBFF91; 
     --clr-text: #ffffff;
+    --clr-faded-text: #B9B8B8;
     --clr-border-fade: rgba(255, 255, 255, 0.1);
 
     --font-family-archivo: "Archivo", sans-serif; 
+    --font-family-hind-vadodara: "Hind Vadodara", sans-serif;
+    --font-family-karla: "Karla", sans-serif;
     
     --font-weight-archivo: 900;
 
-    --font-size-h1: clamp(2rem, 15vw, 20rem);
-    --font-size-p: clamp(1rem, 1.5vw, 1.25rem);
+    --font-size-h1-s: clamp(2.2rem, 15vw, 25rem);
+    --font-size-h1: clamp(2rem, 10vw, 20rem);
+    --font-size-h4: clamp(1rem, 2.5vw, 10rem);
+    --font-size-h5: clamp(0.9rem, 2vw, 8rem);
+    --font-size-p: clamp(1rem, 1.4vw, 1.25rem);
+
+    --font-size-logo-circle: clamp(1.2rem, 3vw, 5rem); /* Similar to font size h1 */
     --font-size-cta: clamp(1.2rem, 2vw, 2rem);
     --font-size-nav: clamp(1.2rem, 2vw, 2rem);
 
+    --svg-size-facebook: clamp(0.5rem, 1vw, 1rem);
+
     --padding-page: 50px;
+    --padding-h1-s: clamp(0.5rem, 3.1vw, 3rem);
+
+    --margin-top-logo-circle: clamp(0.6rem, 1.6vw, 3rem);
+    --margin-inline-logo-circle: clamp(0.3rem, 1vw, 1rem);
 
     --transition-cta: 0.3s ease all; 
+
+    --img-size-samurai: clamp(10rem, 30vw, 35rem);
 
 }
 
