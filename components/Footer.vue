@@ -1,5 +1,5 @@
 <template>
-    <div class="grid-container">
+    <footer class="grid-container">
         <Logo/>
 
         <div class="hours-container">
@@ -17,7 +17,7 @@
 
         <div class="info-container" id="location">
             <h5>Location</h5>
-            <p>596 Illinois Route 59, Naperville, IL 60540</p>
+            <address>596 Illinois Route 59, Naperville, IL 60540</address>
         </div>
 
         <div class="info-container" id="phone">
@@ -49,7 +49,7 @@
             <img src="~/assets/imgs/samurai.png">
         </div>
         
-    </div>
+    </footer>
     
 </template>
 
