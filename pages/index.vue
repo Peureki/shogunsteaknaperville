@@ -98,10 +98,90 @@
         </button>
     </section>
 
-    <section class="grid-container" id="grid-testimonials">
+    <section class="grid-container" id="grid-test">
+        <!-- 
+            * ADJUSTED POLAROID HEIGHTS: 
+            # 5, 6, 7
+        -->
+        <Polaroid
+            id="polaroid-test-chef-5"
+            :src="Chef5"
+            alt="Chef casting fire on the grill"
+            title="Chef casting fire on the grill"
+            height="15"
+        />
 
+        <img id="test-sakura-flower-1" src="~/assets/svgs/sakura-flower-1.svg" alt="Sakura flower" title="Sakura flower">
 
-    </section>
+        <Polaroid
+            id="polaroid-test-chef-6"
+            :src="Chef5"
+            alt="Chef casting fire on the grill"
+            title="Chef casting fire on the grill"
+            height="15"
+        />
+        <Polaroid
+            id="polaroid-test-chef-7"
+            :src="Chef5"
+            alt="Chef casting fire on the grill"
+            title="Chef casting fire on the grill"
+            height="30"
+        />
+        <Polaroid
+            id="polaroid-test-chef-8"
+            :src="Chef5"
+            alt="Chef casting fire on the grill"
+            title="Chef casting fire on the grill"
+        />
+
+        <Description
+            id="test-desc"
+            title="From our family to yours"
+            description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            cta-message="Call to reserve"
+            cta-to="/contact"
+        />
+
+        <img id="test-koi" :src="Koi2" alt="Koi" title="Koi">
+
+        <Testimonial
+            id="test-message-1"
+            :message="[
+                'BEST. Hibachi. EVER.',
+                'Delicious, Family owned small business that’s been a staple of Naperville since 1981!!',
+                'Beyond having amazing food in large portions at affordable prices; it’s laid back, comforting atmosphere tells endless stories over four decades of memories and celebrations lined as wallpaper made of photos.. Various snapshots of happiness and joy brought together by food, family, friendships, and fun!! 🍱🍜🍣💕',
+                'Katie M'
+            ]"
+        />
+
+        <Polaroid
+            id="polaroid-test-chef-9"
+            :src="Chef5"
+            alt="Chef casting fire on the grill"
+            title="Chef casting fire on the grill"
+            height="15"
+        />
+
+        <Testimonial
+            id="test-message-2"
+            :message="[
+                'I love this place!  There is no other hibachi place where the food is better.  The fried rice is the absolute best that I have tasted to date.  The chefs are fun and interact with the guests throughout the cooking show.',
+                'I recommend this place to anyone that likes hibachi.  It\'s about $40 a plate if you order the filet with tip.  The portion of food is generous.',
+                'Robert C'
+            ]"
+        />
+
+        <img id="test-sakura-flower-2" src="~/assets/svgs/sakura-flower-2.svg" alt="Sakura flower" title="Sakura flower">
+
+        <Polaroid
+            id="polaroid-test-chef-10"
+            :src="Chef5"
+            alt="Chef casting fire on the grill"
+            title="Chef casting fire on the grill"
+            height="15"
+        />
+        
+    </section>    
 </template>
 
 <script setup>
@@ -113,6 +193,9 @@ import Onion1 from '~/assets/imgs/onion-1.png'
 import Chef3 from '~/assets/imgs/chef-3.jpg'
 import Chef4 from '~/assets/imgs/chef-4.jpg'
 import Koi1 from '~/assets/svgs/koi-1.svg'
+
+import Chef5 from '~/assets/imgs/chef-5.png'
+import Koi2 from '~/assets/svgs/koi-2.svg'
 
 // const screenWidth = ref(window.innerWidth); 
 
@@ -244,9 +327,56 @@ header.grid-container{
  * TESTIMONIALS SECTION
  *
  */
-#grid-testimonials{
+#grid-test{
     grid-template-areas: 
         'pChef5 pChef5 sakuraFlower1 . . . . . . . . .'
+        '. . pChef6 pChef6 pChef7 pChef7 pChef7 pChef7 pChef8 pChef8 pChef8 pChef8'
+        '. . . . pChef7 pChef7 pChef7 pChef7 pChef8 pChef8 pChef8 pChef8'
+        'testDesc testDesc testDesc testDesc testDesc . testKoi testKoi testMessage1 testMessage1 testMessage1 testMessage1'
+        'testDesc testDesc testDesc testDesc testDesc . pChef9 pChef9 testMessage1 testMessage1 testMessage1 testMessage1'
+        '. . . . . . testMessage2 testMessage2 testMessage2 testMessage2 sakuraFlower2 sakuraFlower2'
+        '. . . . . . testMessage2 testMessage2 testMessage2 testMessage2 pChef10 pChef10'
     ;
+}
+#polaroid-test-chef-5{
+    grid-area: pChef5;
+}
+#polaroid-test-chef-6{
+    grid-area: pChef6;
+}
+#polaroid-test-chef-7{
+    grid-area: pChef7;
+}
+#polaroid-test-chef-8{
+    grid-area: pChef8;
+}
+#polaroid-test-chef-9{
+    grid-area: pChef9;
+}
+#polaroid-test-chef-10{
+    grid-area: pChef10;
+}
+#test-sakura-flower-1{
+    grid-area: sakuraFlower1;
+    width: var(--svg-size-sakura-flower);
+}
+#test-sakura-flower-2{
+    grid-area: sakuraFlower2;
+    width: var(--svg-size-sakura-flower);
+}
+#test-desc{
+    grid-area: testDesc;
+    position: sticky;
+    top: 100px;
+}
+#test-koi{
+    grid-area: testKoi;
+    width: var(--w-koi);
+}
+#test-message-1{
+    grid-area: testMessage1;
+}
+#test-message-2{
+    grid-area: testMessage2;
 }
 </style>
