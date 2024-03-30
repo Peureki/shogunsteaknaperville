@@ -1,10 +1,10 @@
 <template>
     <div class="desc-container">
-        <h2>{{ title }}</h2>
+        <h2 v-if="title">{{ title }}</h2>
 
-        <p>{{ description }}</p>
+        <p v-for="(paragraph, index) in description" :key="index">{{ paragraph }}</p>
 
-        <button class="cta">
+        <button v-if="ctaMessage && ctaTo" class="cta">
             <NuxtLink :to="ctaTo">{{ ctaMessage }}</NuxtLink>
         </button>
     </div>
@@ -14,7 +14,7 @@
 
 const props = defineProps({
     title: String,
-    description: String, 
+    description: Array, 
     ctaMessage: String,
     ctaTo: String, 
 })

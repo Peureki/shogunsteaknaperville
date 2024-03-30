@@ -35,15 +35,16 @@
     -->
 
     <section class="grid-container" id="grid-about">
-        <div class="desc-container" id="desc-about">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        <Description
+            id="desc-about"
+            :description="[
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+            ]"
+            cta-message="Learn more about your family"
+            cta-to="/about"
 
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-        </div>
-
-        <button class="cta" id="cta-about">
-            <NuxtLink to="/about">Learn more about our family</NuxtLink>
-        </button>
+        />
 
         <Polaroid
             id="polaroid-about"
@@ -58,7 +59,6 @@
         *
         *
     -->
-
     <section class="grid-container" id="grid-menu">
         <img id="sakura-menu" src="~/assets/svgs/sakura-1.svg" alt="Sakura tree brance" title="Sakura">
         
@@ -85,23 +85,28 @@
 
         <img id="polaroid-menu-koi" :src="Koi1" alt="Koi" title="Koi">
 
-        <h2 id="desc-title">Teppanyaki & Sushi</h2>
-
-        <div class="desc-container" id="desc-menu">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-        </div>
-
-        <button class="cta" id="cta-menu">
-            <NuxtLink to="/menu">View our menu</NuxtLink>
-        </button>
+        <Description
+            id="desc-menu"
+            title="Teppanyaki & Sushi"
+            :description="[
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+            ]"
+            cta-message="View our menu"
+            cta-to="/menu"
+        />
     </section>
-
+    <!--
+        *
+        * 
+        * TESTIMONIALS SECTION
+        *
+        *
+    -->
     <section class="grid-container" id="grid-test">
         <!-- 
             * ADJUSTED POLAROID HEIGHTS: 
-            # 5, 6, 7
+            # 5, 6, 7, 9
         -->
         <Polaroid
             id="polaroid-test-chef-5"
@@ -137,7 +142,7 @@
         <Description
             id="test-desc"
             title="From our family to yours"
-            description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            :description="['Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.']"
             cta-message="Call to reserve"
             cta-to="/contact"
         />
@@ -180,8 +185,45 @@
             title="Chef casting fire on the grill"
             height="15"
         />
-        
-    </section>    
+
+        <Testimonial
+            id="test-message-3"
+            :message="[
+                'We\'ve been a customer for almost 25 years. The food and the experience is as good now as it was in 1997. Thousands of Polaroid-like photos of satisfied customers line the walls as a testament to their longevity.',
+
+                'We had Mai Tais as starter drinks and they were of good size and strength. Wr followed up with the mandatory 20oz Sapporo beers for the meal.',
+
+                'Service was quick, but not too quick as you want to enjoy the experience. The hibachi chef was skillful and very friendly. Food (we were a group of 6) covered shrimp, scallops, steak and spicy chicken and all were great. Portion size was excellent ensuring a lot of leftovers. Sauces included ginger, horseradish and the absolutely essential yum yum sauce.',
+
+                'Well worth a visit.',
+
+                'Michael S'
+            ]"
+        />
+
+        <Polaroid
+            id="polaroid-test-chef-11"
+            :src="Chef5"
+            alt="Chef casting fire on the grill"
+            title="Chef casting fire on the grill"
+            height="15"
+        />
+    </section>   
+    
+    <!--
+        *
+        * 
+        * CONTACT US SECTION
+        *
+        *
+    -->
+    <section class="grid-container" id="contact-container">
+        <Description 
+            id="contact-desc"
+            title="Connect with us"
+        />
+        <ContactForm id="contact-form"/>
+    </section>
 </template>
 
 <script setup>
@@ -222,7 +264,7 @@ import Koi2 from '~/assets/svgs/koi-2.svg'
 header.grid-container{
     position: relative;
     height: 100dvh; 
-    padding-top: calc(var(--font-size-nav) + var(--font-size-p) + 75px);
+    padding-top: var(--padding-outside-nav);
     grid-template-rows: 2fr 1.5fr;
     grid-template-areas: 
         'one one one one two two two two . . . .'
@@ -285,9 +327,7 @@ header.grid-container{
         'sakuraMenu sakuraMenu sakuraMenu sakuraMenu . . pOnion pOnion pChef3 pChef3 pChef3 pChef3'
         'sakuraMenu sakuraMenu sakuraMenu sakuraMenu . . pOnion pOnion pChef3 pChef3 pChef3 pChef3'
         'sakuraMenu sakuraMenu sakuraMenu sakuraMenu . . pKoi1 pKoi1 pChef3 pChef3 pChef3 pChef3'
-        '. . . . . . dTitle dTitle dTitle dTitle dTitle dTitle'
         'pChef4 pChef4 pChef4 pChef4 . . dMenu dMenu dMenu dMenu dMenu dMenu'
-        'pChef4 pChef4 pChef4 pChef4 . . cMenu cMenu cMenu cMenu cMenu cMenu'
     ;
 }
 #sakura-menu{
@@ -312,14 +352,8 @@ header.grid-container{
     grid-area: pKoi1;
     width: var(--w-koi);
 }
-#desc-title{
-    grid-area: dTitle
-}
 #desc-menu{
     grid-area: dMenu;
-}
-#cta-menu{
-    grid-area: cMenu;
 }
 
 /*
@@ -336,6 +370,8 @@ header.grid-container{
         'testDesc testDesc testDesc testDesc testDesc . pChef9 pChef9 testMessage1 testMessage1 testMessage1 testMessage1'
         '. . . . . . testMessage2 testMessage2 testMessage2 testMessage2 sakuraFlower2 sakuraFlower2'
         '. . . . . . testMessage2 testMessage2 testMessage2 testMessage2 pChef10 pChef10'
+        '. . . . . . . . testMessage3 testMessage3 testMessage3 testMessage3'
+        '. . . . . . pChef11 pChef11 testMessage3 testMessage3 testMessage3 testMessage3'
     ;
 }
 #polaroid-test-chef-5{
@@ -356,6 +392,9 @@ header.grid-container{
 #polaroid-test-chef-10{
     grid-area: pChef10;
 }
+#polaroid-test-chef-11{
+    grid-area: pChef11;
+}
 #test-sakura-flower-1{
     grid-area: sakuraFlower1;
     width: var(--svg-size-sakura-flower);
@@ -367,7 +406,7 @@ header.grid-container{
 #test-desc{
     grid-area: testDesc;
     position: sticky;
-    top: 100px;
+    top: var(--padding-outside-nav);
 }
 #test-koi{
     grid-area: testKoi;
@@ -378,5 +417,21 @@ header.grid-container{
 }
 #test-message-2{
     grid-area: testMessage2;
+}
+#test-message-3{
+    grid-area: testMessage3;
+}
+
+#contact-container{
+    grid-template-areas:
+        'contactDesc contactDesc contactDesc contactDesc contactDesc contactDesc . . . . . .'
+        'form form form form form form . . . . . .'
+    ;
+}
+#contact-desc{
+    grid-area: contactDesc;
+}
+#contact-form{
+    grid-area: form;
 }
 </style>
