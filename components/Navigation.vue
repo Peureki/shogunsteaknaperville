@@ -1,6 +1,6 @@
 <template>
     <header>
-        <nav>
+        <nav class="desktop">
             <ul>
                 <li><NuxtLink to="/">Home</NuxtLink></li>
                 <li><NuxtLink to="/menu">Menu</NuxtLink></li>
@@ -18,14 +18,21 @@
             <button class="cta">
                 <div class="cta-phone-container">
                     <NuxtLink to="/">Call to Reserve</NuxtLink> 
+                    
                 </div>
             </button>
+        </nav>
+
+        <nav class="mobile">
+            <NuxtLink to="/menu">Menu</NuxtLink>
+            <img src="~/assets/svgs/phone.svg" alt="Phone" title="Phone">
+            <img src="~/assets/svgs/hamburger.svg" alt="Hamburger" title="Hamburger"
         </nav>
     </header>
 </template>
 
 <style scoped>
-nav {
+nav.desktop{
     position: fixed;
     top: 0;
     left: 0;
@@ -36,20 +43,31 @@ nav {
     align-items: center;
     border-bottom: 1px solid var(--clr-border-fade);
     padding-inline: var(--padding-page);
-    padding-block: 10px;
+    padding-block: var(--padding-block-nav);
     z-index: 1000;
+}
+nav.mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: var(--padding-page);
+    padding-block: var(--padding-block-nav-mobile);
+}
+@media screen and (max-width: 768px){
+    nav.desktop{
+        display: none;
+    }
+    nav.mobile{
+        display: flex;
+    }
 }
 ul {
     list-style: none;
     display: flex;
     flex-direction: row;
     margin: 0;
+    padding: 0;
     gap: 50px;
-}
-li {
-    font-family: var(--font-family-archivo);
-    font-size: var(--font-size-nav);
-    font-weight: var(--font-weight-archivo);
 }
 .cta-phone-container{
     display: flex;
@@ -59,8 +77,8 @@ li {
     gap: 20px;
 }
 .cta::before{
-    width: clamp(2rem, 3vw, 4rem);
-    height: clamp(2rem, 3vw, 4rem);
+    width: clamp(2rem, 4vw, 5rem);
+    height: clamp(2rem, 4vw, 5rem);
 }
 .cta:hover::before {
     width: 100%; 

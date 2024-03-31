@@ -78,6 +78,9 @@ button a, input[type="Submit"]{
 }
 
 a {
+    font-family: var(--font-family-archivo);
+    font-size: var(--font-size-nav);
+    font-weight: var(--font-weight-archivo);
     color: var(--clr-text);
 }
 
@@ -136,7 +139,7 @@ section.grid-container{
 span.logo-container{
     display: flex;
     grid-area: logo;
-    align-items: flex-end;
+    align-items: center;
 }
 span.logo {
     display: flex;
@@ -203,10 +206,11 @@ span.title-container{
     --font-size-testimonials: clamp(0.9rem, 1.1vw, 1.7rem);
     --font-size-logo-circle: clamp(1.2rem, 3vw, 5rem); /* Similar to font size h1 */
     --font-size-cta: clamp(1.2rem, 2vw, 2.5rem);
-    --font-size-nav: clamp(1.2rem, 2vw, 1.5rem);
+    --font-size-nav: clamp(2rem, 2vw, 2.5rem);
 
     --svg-size-facebook: clamp(0.5rem, 1vw, 1rem);
     --svg-size-sakura-flower: clamp(1.5rem, 5vw, 5rem);
+    --svg-size-sakura-branch: clamp(10rem, 40vw, 80rem);
 
     --cta-circle-size: clamp(2rem, 5vw, 8rem);
 
@@ -214,13 +218,15 @@ span.title-container{
     --gap-grid-form-row: clamp(1.5rem, 2vw, 8rem);
     --gap-grid-column: clamp(1rem, 1.5vw, 5rem);
 
-    --padding-page: 50px;
+    --padding-page: clamp(1.5rem, 3vw, 4rem);
     --padding-h1-s: clamp(0.5rem, 1.7vw, 3rem);
     --padding-desc: clamp(2rem, 5vw, 5rem);
-    --padding-section-grid: clamp(2rem, 2.7vw, 10rem);
+    --padding-section-grid: clamp(3rem, 5vw, 15rem);
     --padding-testimonials: clamp(1rem, 2vw, 3.5rem);
     --padding-testimonial-line-break: clamp(0.5rem, 1.5vw, 2rem);
     --padding-outside-nav: calc(var(--font-size-nav) + var(--font-size-p) + 75px);
+    --padding-block-nav: clamp(0.8rem, 5vw, 1rem);
+    --padding-block-nav-mobile: clamp(1rem, 10vw, 2rem);
 
     --margin-top-logo-circle: clamp(0.6rem, 1.6vw, 3rem);
     --margin-inline-logo-circle: clamp(0.3rem, 1vw, 1rem);

@@ -208,6 +208,8 @@
             title="Chef casting fire on the grill"
             height="15"
         />
+
+        
     </section>   
     
     <!--
@@ -221,8 +223,10 @@
         <Description 
             id="contact-desc"
             title="Connect with us"
+            :description="['Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.']"
         />
         <ContactForm id="contact-form"/>
+        <img id="contact-sakura" src="~/assets/svgs/sakura-2.svg" alt="Sakura tree branch" title="Sakura tree branch"> 
     </section>
 </template>
 
@@ -425,7 +429,7 @@ header.grid-container{
 #contact-container{
     grid-template-areas:
         'contactDesc contactDesc contactDesc contactDesc contactDesc contactDesc . . . . . .'
-        'form form form form form form . . . . . .'
+        'form form form form form form sakura sakura sakura sakura sakura sakura'
     ;
 }
 #contact-desc{
@@ -433,5 +437,13 @@ header.grid-container{
 }
 #contact-form{
     grid-area: form;
+}
+#contact-sakura{
+    grid-area: sakura;
+    width: var(--svg-size-sakura-branch);
+    position: absolute;
+    right: calc(var(--padding-page) * -1);
+    bottom: calc(var(--padding-section-grid) * -1);
+    transform: rotate(90deg);
 }
 </style>
