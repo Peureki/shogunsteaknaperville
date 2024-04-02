@@ -26,13 +26,13 @@
         <nav class="mobile">
             <NuxtLink to="/menu">Menu</NuxtLink>
             <img src="~/assets/svgs/phone.svg" alt="Phone" title="Phone">
-            <img src="~/assets/svgs/hamburger.svg" alt="Hamburger" title="Hamburger"
+            <img id="hamburger" src="~/assets/svgs/hamburger.svg" alt="Hamburger" title="Hamburger">
         </nav>
     </header>
 </template>
 
 <style scoped>
-nav.desktop{
+nav.desktop, nav.mobile{
     position: fixed;
     top: 0;
     left: 0;
@@ -46,13 +46,28 @@ nav.desktop{
     padding-block: var(--padding-block-nav);
     z-index: 1000;
 }
-nav.mobile{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline: var(--padding-page);
-    padding-block: var(--padding-block-nav-mobile);
+nav.mobile img{
+    width: var(--svg-size-nav);
+    cursor: pointer;
 }
+nav.mobile#hamburger::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0, -50%);
+    z-index: -1;
+    width: var(--cta-circle-size);
+    height: var(--cta-circle-size);
+    border-radius: var(--cta-circle-size);
+    background-color: var(--clr-cta-bkg);
+    transition: var(--transition-cta);
+}
+/*
+ *
+ * MOBILE
+ *
+ */
 @media screen and (max-width: 768px){
     nav.desktop{
         display: none;
@@ -61,6 +76,19 @@ nav.mobile{
         display: flex;
     }
 }
+@media screen and (min-width: 768px){
+    nav.desktop{
+        display: flex;
+    }
+    nav.mobile{
+        display: none;
+    }
+}
+/*
+ *
+ * DESKTOP
+ *
+ */
 ul {
     list-style: none;
     display: flex;

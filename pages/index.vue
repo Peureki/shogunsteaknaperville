@@ -41,14 +41,16 @@
                 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
                 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
             ]"
-            cta-message="Learn more about your family"
+            cta-message="Learn more about our family"
             cta-to="/about"
 
         />
 
         <Polaroid
             id="polaroid-about"
-            :src="PolaroidAbout"
+            :src="Polaroidesc"
+            alt="Display of polaroid pictures on the restaurant walls of past happy customers"
+            title="Polaroid pictures on the restaurant walls of past happy customers"
         />
     </section>
 
@@ -70,14 +72,14 @@
         />
 
         <Polaroid
-            id="polaroid-menu-chef-3"
+            id="polaroid-menu-chef-1"
             :src="Chef3"
             alt="Chef making fire on a grill while throwing oil"
             title="Hibachi chef"
         />
 
         <Polaroid
-            id="polaroid-menu-chef-4"
+            id="polaroid-menu-chef-2"
             :src="Chef4"
             alt="Chef cooking food on the grill"
             title="Hibachi"
@@ -109,7 +111,7 @@
             # 5, 6, 7, 9
         -->
         <Polaroid
-            id="polaroid-test-chef-5"
+            id="polaroid-test-chef-1"
             :src="Chef5"
             alt="Chef casting fire on the grill"
             title="Chef casting fire on the grill"
@@ -119,21 +121,21 @@
         <img id="test-sakura-flower-1" src="~/assets/svgs/sakura-flower-1.svg" alt="Sakura flower" title="Sakura flower">
 
         <Polaroid
-            id="polaroid-test-chef-6"
+            id="polaroid-test-chef-2"
             :src="Chef5"
             alt="Chef casting fire on the grill"
             title="Chef casting fire on the grill"
             height="15"
         />
         <Polaroid
-            id="polaroid-test-chef-7"
+            id="polaroid-test-chef-3"
             :src="Chef5"
             alt="Chef casting fire on the grill"
             title="Chef casting fire on the grill"
             height="30"
         />
         <Polaroid
-            id="polaroid-test-chef-8"
+            id="polaroid-test-chef-4"
             :src="Chef5"
             alt="Chef casting fire on the grill"
             title="Chef casting fire on the grill"
@@ -160,7 +162,7 @@
         />
 
         <Polaroid
-            id="polaroid-test-chef-9"
+            id="polaroid-test-chef-5"
             :src="Chef5"
             alt="Chef casting fire on the grill"
             title="Chef casting fire on the grill"
@@ -171,7 +173,7 @@
             id="test-message-2"
             :message="[
                 'I love this place!  There is no other hibachi place where the food is better.  The fried rice is the absolute best that I have tasted to date.  The chefs are fun and interact with the guests throughout the cooking show.',
-                'I recommend this place to anyone that likes hibachi.  It\'s about $40 a plate if you order the filet with tip.  The portion of food is generous.',
+                'I recommend this place to anypolaroid1 that likes hibachi.  It\'s about $40 a plate if you order the filet with tip.  The portion of food is generous.',
                 'Robert C'
             ]"
         />
@@ -179,7 +181,7 @@
         <img id="test-sakura-flower-2" src="~/assets/svgs/sakura-flower-2.svg" alt="Sakura flower" title="Sakura flower">
 
         <Polaroid
-            id="polaroid-test-chef-10"
+            id="polaroid-test-chef-6"
             :src="Chef5"
             alt="Chef casting fire on the grill"
             title="Chef casting fire on the grill"
@@ -202,7 +204,7 @@
         />
 
         <Polaroid
-            id="polaroid-test-chef-11"
+            id="polaroid-test-chef-7"
             :src="Chef5"
             alt="Chef casting fire on the grill"
             title="Chef casting fire on the grill"
@@ -233,7 +235,7 @@
 <script setup>
 import Chef1 from '~/assets/imgs/chef-1.jpg'
 import Chef2 from '~/assets/imgs/chef-2.png'
-import PolaroidAbout from '~/assets/imgs/wall.jpg'
+import Polaroidesc from '~/assets/imgs/wall.jpg'
 
 import Onion1 from '~/assets/imgs/onion-1.png'
 import Chef3 from '~/assets/imgs/chef-3.jpg'
@@ -271,32 +273,18 @@ header.grid-container{
     padding-top: var(--padding-outside-nav);
     grid-template-rows: 2fr 1.5fr;
     grid-template-areas: 
-        'one one one one two two two two . . . .'
+        'polaroid1 polaroid1 polaroid1 polaroid1 polaroid2 polaroid2 polaroid2 polaroid2 . . . .'
         'logo logo logo logo logo logo logo logo sakura sakura sakura sakura'
     ;
-}
-#grid-about{
-    grid-template-areas: 
-        'dAbout dAbout dAbout dAbout dAbout dAbout . . pAbout pAbout pAbout pAbout'
-        'cAbout cAbout cAbout cAbout cAbout cAbout . . pAbout pAbout pAbout pAbout'
-    ;
-}
-@media screen and (min-width: 1600px){
-    #grid-about{
-        grid-template-areas: 
-            'dAbout dAbout dAbout dAbout dAbout . pAbout pAbout pAbout pAbout pAbout pAbout'
-            'cAbout cAbout cAbout cAbout cAbout . pAbout pAbout pAbout pAbout pAbout pAbout'
-        ;
-    }
 }
 #logo{
     padding-bottom: 50px;
 }
 #polaroid-1{
-    grid-area: one;
+    grid-area: polaroid1;
 }
 #polaroid-2{
-    grid-area: two;
+    grid-area: polaroid2;
 }
 #sakura{
     position: absolute;
@@ -308,17 +296,67 @@ header.grid-container{
 }
 /*
  *
+ * MOBILE HEADER SECTION
+ *
+ */
+@media screen and (max-width: 768px){
+    header.grid-container{
+        grid-template-areas: 
+            'logo logo logo logo logo logo'
+            'polaroid1 polaroid1 polaroid1 sakura sakura sakura'
+            'polaroid2 polaroid2 polaroid2 sakura sakura sakura'
+        ;
+        height: unset;
+        grid-template-rows: unset;
+    }
+    #logo{
+        padding-bottom: 0px;
+    }
+    #sakura{
+        top: 20%;
+    }
+    #polaroid-1, #polaroid-2{
+        height: 40vw;
+    }
+}
+
+/*
+ *
  * ABOUT SECTION
  *
  */
+#grid-about{
+    grid-template-areas: 
+        'desc desc desc desc desc desc . . polaroid polaroid polaroid polaroid'
+        'cta cta cta cta cta cta . . polaroid polaroid polaroid polaroid'
+    ;
+}
 #desc-about{
-    grid-area: dAbout;
+    grid-area: desc;
 }
 #cta-about{
-    grid-area: cAbout;
+    grid-area: cta;
 }
 #polaroid-about{
-    grid-area: pAbout;
+    grid-area: polaroid;
+}
+/*
+ *
+ * MOBILE ABOUT SECTION
+ *
+ */
+@media screen and (max-width: 768px){
+    #grid-about{
+        grid-template-areas: 
+            'desc desc desc desc desc desc'
+            'cta cta cta cta cta cta'
+            'polaroid polaroid polaroid polaroid polaroid polaroid'
+        
+        ;
+    }
+    #polaroid-about{
+        height: 60vw;
+    }
 }
 /*
  *
@@ -328,15 +366,15 @@ header.grid-container{
 #grid-menu{
     position: relative;
     grid-template-areas: 
-        'sakuraMenu sakuraMenu sakuraMenu sakuraMenu . . pOnion pOnion pChef3 pChef3 pChef3 pChef3'
-        'sakuraMenu sakuraMenu sakuraMenu sakuraMenu . . pOnion pOnion pChef3 pChef3 pChef3 pChef3'
-        'sakuraMenu sakuraMenu sakuraMenu sakuraMenu . . pKoi1 pKoi1 pChef3 pChef3 pChef3 pChef3'
-        'pChef4 pChef4 pChef4 pChef4 . . dMenu dMenu dMenu dMenu dMenu dMenu'
+        'sakura sakura sakura sakura . . pOnion pOnion pChef1 pChef1 pChef1 pChef1'
+        'sakura sakura sakura sakura . . pOnion pOnion pChef1 pChef1 pChef1 pChef1'
+        'sakura sakura sakura sakura . . koi koi pChef1 pChef1 pChef1 pChef1'
+        'pChef2 pChef2 pChef2 pChef2 . . menu menu menu menu menu menu'
     ;
 }
 #sakura-menu{
     position: absolute;
-    grid-area: sakuraMenu; 
+    grid-area: sakura; 
     width: clamp(10rem, 40vw, 80rem);
     left: calc(var(--padding-page) * -1);
     z-index: -1;
@@ -344,20 +382,38 @@ header.grid-container{
 #polaroid-menu-onion{
     grid-area: pOnion;
 }
-#polaroid-menu-chef-3{
-    grid-area: pChef3;
+#polaroid-menu-chef-1{
+    grid-area: pChef1;
     width: 100%;
     height: var(--polaroid-w);
 }
-#polaroid-menu-chef-4{
-    grid-area: pChef4;
+#polaroid-menu-chef-2{
+    grid-area: pChef2;
 }
 #polaroid-menu-koi{
-    grid-area: pKoi1;
+    grid-area: koi;
     width: var(--w-koi);
 }
 #desc-menu{
-    grid-area: dMenu;
+    grid-area: menu;
+}
+/*
+ *
+ * MOBILE ABOUT SECTION
+ *
+ */
+@media screen and (max-width: 768px){
+    #grid-menu{
+        grid-template-areas: 
+            'sakura sakura sakura sakura pOnion pOnion'
+            '. . . . . koi'
+            'menu menu menu menu menu menu'
+            'pChef1 pChef1 pChef1 pChef2 pChef2 pChef2'
+        ;
+    }
+    #polaroid-menu-onion{
+        height: 30vw;
+    }
 }
 
 /*
@@ -367,37 +423,37 @@ header.grid-container{
  */
 #grid-test{
     grid-template-areas: 
-        'pChef5 pChef5 sakuraFlower1 . . . . . . . . .'
-        '. . pChef6 pChef6 pChef7 pChef7 pChef7 pChef7 pChef8 pChef8 pChef8 pChef8'
-        '. . . . pChef7 pChef7 pChef7 pChef7 pChef8 pChef8 pChef8 pChef8'
-        'testDesc testDesc testDesc testDesc testDesc . testKoi testKoi testMessage1 testMessage1 testMessage1 testMessage1'
-        'testDesc testDesc testDesc testDesc testDesc . pChef9 pChef9 testMessage1 testMessage1 testMessage1 testMessage1'
-        '. . . . . . testMessage2 testMessage2 testMessage2 testMessage2 sakuraFlower2 sakuraFlower2'
-        '. . . . . . testMessage2 testMessage2 testMessage2 testMessage2 pChef10 pChef10'
-        '. . . . . . . . testMessage3 testMessage3 testMessage3 testMessage3'
-        '. . . . . . pChef11 pChef11 testMessage3 testMessage3 testMessage3 testMessage3'
+        'chef1 chef1 sakuraFlower1 . . . . . . . . .'
+        '. . chef2 chef2 chef3 chef3 chef3 chef3 chef4 chef4 chef4 chef4'
+        '. . . . chef3 chef3 chef3 chef3 chef4 chef4 chef4 chef4'
+        'desc desc desc desc desc . koi koi message1 message1 message1 message1'
+        'desc desc desc desc desc . chef5 chef5 message1 message1 message1 message1'
+        '. . . . . . message2 message2 message2 message2 sakuraFlower2 sakuraFlower2'
+        '. . . . . . message2 message2 message2 message2 chef6 chef6'
+        '. . . . . . . . message3 message3 message3 message3'
+        '. . . . . . chef7 chef7 message3 message3 message3 message3'
     ;
 }
+#polaroid-test-chef-1{
+    grid-area: chef1;
+}
+#polaroid-test-chef-2{
+    grid-area: chef2;
+}
+#polaroid-test-chef-3{
+    grid-area: chef3;
+}
+#polaroid-test-chef-4{
+    grid-area: chef4;
+}
 #polaroid-test-chef-5{
-    grid-area: pChef5;
+    grid-area: chef5;
 }
 #polaroid-test-chef-6{
-    grid-area: pChef6;
+    grid-area: chef6;
 }
 #polaroid-test-chef-7{
-    grid-area: pChef7;
-}
-#polaroid-test-chef-8{
-    grid-area: pChef8;
-}
-#polaroid-test-chef-9{
-    grid-area: pChef9;
-}
-#polaroid-test-chef-10{
-    grid-area: pChef10;
-}
-#polaroid-test-chef-11{
-    grid-area: pChef11;
+    grid-area: chef7;
 }
 #test-sakura-flower-1{
     grid-area: sakuraFlower1;
@@ -408,32 +464,65 @@ header.grid-container{
     width: var(--svg-size-sakura-flower);
 }
 #test-desc{
-    grid-area: testDesc;
+    grid-area: desc;
     position: sticky;
     top: var(--padding-outside-nav);
 }
 #test-koi{
-    grid-area: testKoi;
+    grid-area: koi;
     width: var(--w-koi);
 }
 #test-message-1{
-    grid-area: testMessage1;
+    grid-area: message1;
 }
 #test-message-2{
-    grid-area: testMessage2;
+    grid-area: message2;
 }
 #test-message-3{
-    grid-area: testMessage3;
+    grid-area: message3;
 }
-
+/*
+ *
+ * MOBILE TESTIMONIAL SECTION
+ *
+ */
+@media screen and (max-width: 768px){
+    #grid-test{
+        grid-template-areas: 
+            'chef1 chef1 . . . .'
+            'chef1 chef1 sakuraFlower1 . . .'
+            'desc desc desc desc desc desc'
+            'koi koi message1 message1 message1 message1'
+            'koi koi message1 message1 message1 message1'
+            'message2 message2 message2 message2 sakuraFlower2 sakuraFlower2'
+            'chef2 chef2 message3 message3 message3 message3'
+        ;
+    }
+    #test-desc{
+        position: unset;
+        top: unset;
+    }
+    #polaroid-test-chef-1, #polaroid-test-chef-2{
+        height: 50vw;
+    }
+    #polaroid-test-chef-3, #polaroid-test-chef-4, #polaroid-test-chef-5, #polaroid-test-chef-6, #polaroid-test-chef-7{
+        grid-area: unset;
+        display: none;
+    }
+}
+/*
+ *
+ * CONTACT CONTAINER 
+ *
+ */
 #contact-container{
     grid-template-areas:
-        'contactDesc contactDesc contactDesc contactDesc contactDesc contactDesc . . . . . .'
+        'desc desc desc desc desc desc . . . . . .'
         'form form form form form form sakura sakura sakura sakura sakura sakura'
     ;
 }
 #contact-desc{
-    grid-area: contactDesc;
+    grid-area: desc;
 }
 #contact-form{
     grid-area: form;
@@ -445,5 +534,20 @@ header.grid-container{
     right: calc(var(--padding-page) * -1);
     bottom: calc(var(--padding-section-grid) * -1);
     transform: rotate(90deg);
+    z-index: -1;
+}
+/*
+ *
+ * MOBILE CONTACT CONTAINER 
+ *
+ */
+@media screen and (max-width: 768px){
+    #contact-container{
+        grid-template-areas: 
+            'desc desc desc desc desc desc'
+            'form form form form form form'
+            '. . . . . sakura'
+        ;
+    }
 }
 </style>

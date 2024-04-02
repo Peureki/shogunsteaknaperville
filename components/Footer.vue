@@ -58,15 +58,26 @@
     position: relative;
     grid-template-areas: 
         'logo logo logo logo logo logo logo logo . . . .'
-        'hours hours hours hours . . . . . . . .'
-        'location location location location . . . . . . . .'
-        'phone phone phone phone . . . . . . . .'
-        'socials socials socials socials . . . . . . . .'
+        'hours hours hours hours location location location location . . . .'
+        'hours hours hours hours phone phone phone phone . . . .'
+        'hours hours hours hours socials socials socials socials . . . .'
         'credits credits credits credits credits credits credits credits samurai samurai samurai samurai'
     ;
     padding-top: 50px;
     border-top: 3px solid var(--clr-text);
 }
+@media screen and (max-width: 768px){
+    .grid-container{
+        grid-template-areas: 
+            'logo logo logo logo logo logo'
+            'hours hours hours hours hours hours'
+            'location location location location location location'
+            'phone phone phone phone samurai samurai'
+            'socials socials socials socials samurai samurai'
+            'credits credits credits credits credits credits'
+        ;
+    }
+}   
 /*
  * 
  * GENERAL
