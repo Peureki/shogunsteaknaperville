@@ -385,7 +385,7 @@ header.grid-container{
 #polaroid-menu-chef-1{
     grid-area: pChef1;
     width: 100%;
-    height: var(--polaroid-w);
+    height: var(--w-polaroid);
 }
 #polaroid-menu-chef-2{
     grid-area: pChef2;
@@ -457,11 +457,11 @@ header.grid-container{
 }
 #test-sakura-flower-1{
     grid-area: sakuraFlower1;
-    width: var(--svg-size-sakura-flower);
+    width: var(--w-sakura-flower);
 }
 #test-sakura-flower-2{
     grid-area: sakuraFlower2;
-    width: var(--svg-size-sakura-flower);
+    width: var(--w-sakura-flower);
 }
 #test-desc{
     grid-area: desc;
@@ -529,7 +529,7 @@ header.grid-container{
 }
 #contact-sakura{
     grid-area: sakura;
-    width: var(--svg-size-sakura-branch);
+    width: var(--w-sakura-branch);
     position: absolute;
     right: calc(var(--padding-page) * -1);
     bottom: calc(var(--padding-section-grid) * -1);

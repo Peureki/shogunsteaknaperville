@@ -41,6 +41,11 @@ h2 {
     font-size: var(--font-size-h2);
     font-weight: var(--font-weight-archivo);
 }
+h3{
+    font-family: var(--font-family-hind-vadodara);
+    font-size: var(--font-size-h3);
+    font-weight: 400;
+}
 h4{
     font-weight: 300;
     font-family: var(--font-family-hind-vadodara); 
@@ -51,7 +56,7 @@ h5{
     font-weight: 300;
     font-size: var(--font-size-h5)
 }
-p, address{
+p, address, li{
     font-family: var(--font-family-karla);
     font-size: var(--font-size-p);
     color: var(--clr-faded-text);
@@ -60,6 +65,12 @@ p, address{
 }
 address {
     font-style: normal;
+}
+ul{
+    padding: 0;
+}
+li {
+    list-style-type: none;
 }
 
 button, input[type="Submit"]{ 
@@ -213,6 +224,7 @@ span.title-container{
     --font-size-h1-s: clamp(5.5rem, 13vw, 25rem);
     --font-size-h1: clamp(5rem, 10vw, 20rem);
     --font-size-h2: clamp(3.5rem, 4vw, 17rem);
+    --font-size-h3: clamp(2.5rem, 3.5vw, 15rem);
     --font-size-h4: clamp(2rem, 2.5vw, 10rem);
     --font-size-h5: clamp(2rem, 2vw, 8rem);
     --font-size-p: clamp(1rem, 1.2vw, 2rem);
@@ -222,13 +234,13 @@ span.title-container{
     --font-size-nav: clamp(2rem, 2vw, 2.5rem);
 
     --svg-size-facebook: clamp(0.5rem, 1vw, 1rem);
-    --svg-size-sakura-flower: clamp(3.5rem, 5vw, 5rem);
-    --svg-size-sakura-branch: clamp(10rem, 40vw, 80rem);
+    
     --svg-size-nav: clamp(2rem, 5vw, 8rem);
 
     --cta-circle-size: clamp(3rem, 5vw, 8rem);
 
     --gap-grid-row: clamp(2rem, 2.7vw, 10rem);
+    --gap-menu-row: clamp(0.2rem, 2vw, 1rem);
     --gap-grid-form-row: clamp(1.5rem, 2vw, 8rem);
     --gap-grid-column: clamp(1rem, 1.5vw, 5rem);
 
@@ -249,8 +261,11 @@ span.title-container{
 
     --img-size-samurai: clamp(10rem, 30vw, 35rem);
 
-    --polaroid-w: clamp(10rem, 40vw, 40rem);
+    --w-polaroid: clamp(10rem, 40vw, 40rem);
     --w-koi: clamp(3rem, 10vw, 10rem);
+    --w-sakura-flower: clamp(3.5rem, 5vw, 5rem);
+    --w-sakura-branch: clamp(10rem, 40vw, 80rem);
+    --w-sakura-branch-small: clamp(10rem, 25vw, 50rem);
     --h-textarea: clamp(5rem, 15vw, 10rem);
 
 }
