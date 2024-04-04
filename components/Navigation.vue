@@ -50,13 +50,13 @@ nav.mobile img{
     width: var(--svg-size-nav);
     cursor: pointer;
 }
-nav.mobile#hamburger::before{
+#hamburger::before{
     content: "";
     position: absolute;
     top: 50%;
     left: 0%;
     transform: translate(0, -50%);
-    z-index: -1;
+    z-index: 10000;
     width: var(--cta-circle-size);
     height: var(--cta-circle-size);
     border-radius: var(--cta-circle-size);
