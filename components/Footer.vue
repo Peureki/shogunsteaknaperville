@@ -54,6 +54,10 @@
 </template>
 
 <style scoped>
+footer{
+    background-color: var(--clr-bkg);
+    z-index: 1000;
+}
 .grid-container{
     position: relative;
     grid-template-areas: 
