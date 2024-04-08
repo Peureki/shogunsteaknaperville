@@ -233,12 +233,12 @@
 </template>
 
 <script setup>
-import HeaderChef from "/imgs/chef-5.png"
-import Koi1 from "/svgs/koi-1.svg"
-import Koi2 from "/svgs/koi-2.svg"
-import SakuraFlower1 from "/svgs/sakura-flower-1.svg"
-import SakuraBranch1 from "/svgs/sakura-1.svg"
-import SakuraBranch3 from "/svgs/sakura-3.svg"
+import HeaderChef from "~/assets/imgs/chef-5.png"
+import Koi1 from "~/assets/svgs/koi-1.svg"
+import Koi2 from "~/assets/svgs/koi-2.svg"
+import SakuraFlower1 from "~/assets/svgs/sakura-flower-1.svg"
+import SakuraBranch1 from "~/assets/svgs/sakura-1.svg"
+import SakuraBranch3 from "~/assets/svgs/sakura-3.svg"
 
 
 </script>

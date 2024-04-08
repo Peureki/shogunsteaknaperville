@@ -34,7 +34,7 @@
         -->
         <nav class="mobile">
             <NuxtLink to="/menu">Menu</NuxtLink>
-            <img src="/svgs/phone.svg" alt="Phone" title="Phone">
+            <img src="~/assets/svgs/phone.svg" alt="Phone" title="Phone">
         </nav>
         <!--
             *

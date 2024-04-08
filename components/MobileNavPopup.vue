@@ -52,8 +52,8 @@
 </template>
 
 <script setup>
-import SakuraBranch from '/svgs/sakura-2.svg'
-import SakuraFlower from '/svgs/sakura-flower-2.svg'
+import SakuraBranch from '~/assets/svgs/sakura-2.svg'
+import SakuraFlower from '~/assets/svgs/sakura-flower-2.svg'
 
 </script>
 
