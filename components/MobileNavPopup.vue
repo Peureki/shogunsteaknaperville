@@ -60,9 +60,10 @@ import SakuraFlower from '~/assets/svgs/sakura-flower-2.svg'
 <style scoped>
 .mobile-nav-popup-container{
     position: fixed;
+    top: 0;
     background-color: var(--clr-bkg);
     width: 100dvw;
-    height: 100%;
+    height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
     z-index: 10001;
