@@ -23,7 +23,7 @@
 
         <Logo id="logo"/>
 
-        <img id="sakura" src="~/assets/svgs/sakura-3.svg" alt="Sakura tree branch" title="Sakura">
+        <img id="sakura" src="/svgs/sakura-3.svg" alt="Sakura tree branch" title="Sakura">
     </header>
 
     <!--
@@ -62,7 +62,7 @@
         *
     -->
     <section class="grid-container" id="grid-menu">
-        <img id="sakura-menu" src="~/assets/svgs/sakura-1.svg" alt="Sakura tree brance" title="Sakura">
+        <img id="sakura-menu" src="/svgs/sakura-1.svg" alt="Sakura tree brance" title="Sakura">
         
         <Polaroid
             id="polaroid-menu-onion"
@@ -118,7 +118,7 @@
             height="15"
         />
 
-        <img id="test-sakura-flower-1" src="~/assets/svgs/sakura-flower-1.svg" alt="Sakura flower" title="Sakura flower">
+        <img id="test-sakura-flower-1" src="/svgs/sakura-flower-1.svg" alt="Sakura flower" title="Sakura flower">
 
         <Polaroid
             id="polaroid-test-chef-2"
@@ -178,7 +178,7 @@
             ]"
         />
 
-        <img id="test-sakura-flower-2" src="~/assets/svgs/sakura-flower-2.svg" alt="Sakura flower" title="Sakura flower">
+        <img id="test-sakura-flower-2" src="/svgs/sakura-flower-2.svg" alt="Sakura flower" title="Sakura flower">
 
         <Polaroid
             id="polaroid-test-chef-6"
@@ -228,22 +228,22 @@
             :description="['Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.']"
         />
         <ContactForm id="contact-form"/>
-        <img id="contact-sakura" src="~/assets/svgs/sakura-2.svg" alt="Sakura tree branch" title="Sakura tree branch"> 
+        <img id="contact-sakura" src="/svgs/sakura-2.svg" alt="Sakura tree branch" title="Sakura tree branch"> 
     </section>
 </template>
 
 <script setup>
-import Chef1 from '~/assets/imgs/chef-1.jpg'
-import Chef2 from '~/assets/imgs/chef-2.png'
-import Polaroidesc from '~/assets/imgs/wall.jpg'
+import Chef1 from '/imgs/chef-1.jpg'
+import Chef2 from '/imgs/chef-2.png'
+import Polaroidesc from '/imgs/wall.jpg'
 
-import Onion1 from '~/assets/imgs/onion-1.png'
-import Chef3 from '~/assets/imgs/chef-3.jpg'
-import Chef4 from '~/assets/imgs/chef-4.jpg'
-import Koi1 from '~/assets/svgs/koi-1.svg'
+import Onion1 from '/imgs/onion-1.png'
+import Chef3 from '/imgs/chef-3.jpg'
+import Chef4 from '/imgs/chef-4.jpg'
+import Koi1 from '/svgs/koi-1.svg'
 
-import Chef5 from '~/assets/imgs/chef-5.png'
-import Koi2 from '~/assets/svgs/koi-2.svg'
+import Chef5 from '/imgs/chef-5.png'
+import Koi2 from '/svgs/koi-2.svg'
 
 useHead({
     title: "Shogun Japanese Steakhouse Naperville",

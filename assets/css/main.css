@@ -243,8 +243,8 @@ span.title-container{
     --font-size-p: clamp(1rem, 1.2vw, 2rem);
     --font-size-testimonials: clamp(0.9rem, 1.1vw, 1.7rem);
     --font-size-logo-circle: clamp(1.2rem, 3vw, 5rem); /* Similar to font size h1 */
-    --font-size-cta: clamp(2rem, 2vw, 2.5rem);
-    --font-size-nav: clamp(2rem, 2vw, 2.5rem);
+    --font-size-cta: clamp(1.1rem, 2.5vw, 3rem);
+    --font-size-nav: clamp(1.1rem, 2.5vw, 3rem);
 
     --svg-size-facebook: clamp(1rem, 1.2vw, 3rem);
     

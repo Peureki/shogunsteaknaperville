@@ -46,7 +46,7 @@
         </div>
 
         <div class="samurai">
-            <img src="~/assets/imgs/samurai.png">
+            <img src="/imgs/samurai.png">
         </div>
         
     </footer>

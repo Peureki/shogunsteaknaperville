@@ -1,6 +1,13 @@
 <template>
     <div class="polaroid-container" :style="{height: `${polaroidHeight}vw`}">
-        <img :src="src" :alt="alt" :title="title">
+        <NuxtImg 
+            preload
+            :src="src" 
+            :alt="alt" 
+            :title="title"
+            format="wepb"
+            loading="lazy"
+        />
     </div>
 </template>
 
@@ -12,6 +19,7 @@ const props = defineProps({
     title: String, 
     height: String,
 })
+
 // By default, polaroid w & h are 100% and follow the display:grid content size
 // But for polaroids that need a fixed w & h to fill space because there's no content, then display that custom w & h number
 const polaroidHeight = computed(() => {
