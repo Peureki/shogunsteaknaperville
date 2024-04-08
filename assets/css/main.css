@@ -233,7 +233,7 @@ span.title-container{
     --font-size-cta: clamp(2rem, 2vw, 2.5rem);
     --font-size-nav: clamp(2rem, 2vw, 2.5rem);
 
-    --svg-size-facebook: clamp(0.5rem, 1vw, 1rem);
+    --svg-size-facebook: clamp(1rem, 1.2vw, 3rem);
     
     --svg-size-nav: clamp(2rem, 5vw, 8rem);
 

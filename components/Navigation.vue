@@ -35,9 +35,11 @@ import MobileNavPopup from './MobileNavPopup.vue';
             <span :style="{backgroundColor: middleBun}"></span>
             <span :style="{transform: bottomBun}"></span>
         </div>
+
+        <MobileNavPopup v-if="mobileNavToggle"/>
     </header>
 
-    <MobileNavPopup v-if="mobileNavToggle"/>
+    
 </template>
 
 <script setup>
@@ -70,7 +72,10 @@ nav.desktop, nav.mobile{
     border-bottom: 1px solid var(--clr-border-fade);
     padding-inline: var(--padding-page);
     padding-block: var(--padding-block-nav);
-    z-index: 1000;
+    z-index: 1001;
+}
+nav.desktop{
+    justify-content: space-between;
 }
 nav.mobile img{
     width: var(--svg-size-nav);
@@ -119,19 +124,20 @@ nav.mobile img{
         display: flex;
     }
 }
-@media screen and (min-width: 768px){
-    nav.desktop{
-        display: flex;
-    }
-    nav.mobile{
-        display: none;
-    }
-}
 /*
  *
  * DESKTOP
  *
  */
+@media screen and (min-width: 768px){
+    nav.desktop{
+        display: flex;
+    }
+    nav.mobile, .hamburger-container{
+        display: none;
+    }
+}
+
 ul {
     list-style: none;
     display: flex;
