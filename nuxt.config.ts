@@ -6,6 +6,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
   ],
   image: {
-    provider: 'netlify'
+    provider: 'ipx'
   }
 })
