@@ -62,8 +62,9 @@ import SakuraFlower from '~/assets/svgs/sakura-flower-2.svg'
     position: fixed;
     background-color: var(--clr-bkg);
     width: 100dvw;
-    height: 100dvh;
+    height: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
     z-index: 10001;
 }
 #site-map{
