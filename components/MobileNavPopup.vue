@@ -63,6 +63,7 @@ import SakuraFlower from '~/assets/svgs/sakura-flower-2.svg'
     background-color: var(--clr-bkg);
     width: 100dvw;
     height: 100dvh;
+    overflow-y: scroll;
     z-index: 10001;
 }
 #site-map{
@@ -85,7 +86,7 @@ import SakuraFlower from '~/assets/svgs/sakura-flower-2.svg'
 
 
 li a{
-    font-size: var(--font-size-h2);
+    font-size: var(--font-size-h3);
 }
 #info{
     grid-template-areas: 
