@@ -2,10 +2,10 @@
     <div class="mobile-nav-popup-container">
         <div class="grid-container" id="site-map">
             <ul id="map">
-                <li><NuxtLink to="/">Home</NuxtLink></li>
-                <li><NuxtLink to="/menu">Menu</NuxtLink></li>
-                <li><NuxtLink to="/about">About</NuxtLink></li>
-                <li><NuxtLink to="/contact">Contact</NuxtLink></li>
+                <li><NuxtLink to="/" @click="$emit('closeNav')">Home</NuxtLink></li>
+                <li><NuxtLink to="/menu" @click="$emit('closeNav')">Menu</NuxtLink></li>
+                <li><NuxtLink to="/about" @click="$emit('closeNav')">About</NuxtLink></li>
+                <li><NuxtLink to="/contact" @click="$emit('closeNav')">Contact</NuxtLink></li>
             </ul>
 
             <img id="site-map-sakura" :src="SakuraBranch" alt="Sakura branch" title="Sakura branch">

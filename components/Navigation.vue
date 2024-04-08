@@ -36,7 +36,13 @@ import MobileNavPopup from './MobileNavPopup.vue';
             <span :style="{transform: bottomBun}"></span>
         </div>
 
-        <MobileNavPopup v-if="mobileNavToggle"/>
+        <Transition name="fade">
+            <MobileNavPopup 
+                v-if="mobileNavToggle"
+                @closeNav="mobileNavToggle = !mobileNavToggle"
+            />
+        </Transition>
+        
     </header>
 
     
