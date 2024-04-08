@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
   ],
   image: {
-    provider: 'ipx'
+    provider: 'netlify',
+    domains: ['https://sparkly-chaja-627a17.netlify.app/']
   }
 })
