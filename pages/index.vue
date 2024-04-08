@@ -245,19 +245,24 @@ import Koi1 from '~/assets/svgs/koi-1.svg'
 import Chef5 from '~/assets/imgs/chef-5.png'
 import Koi2 from '~/assets/svgs/koi-2.svg'
 
-// const screenWidth = ref(window.innerWidth); 
+useHead({
+    title: "Shogun Japanese Steakhouse Naperville",
+    meta: [
+        {
+            name: '',
+            content: ''
+        }
+    ]
+})
 
-// watchEffect(() => {
-//     const updateScreenWidth = () => {
-//         screenWidth.value = window.innerWidth; 
-//     }
-
-//     window.addEventListener('resize', updateScreenWidth); 
-
-//     return () => {
-//         window.removeEventListener('resize', updateScreenWidth);
-//     }
-// })
+useSeoMeta({
+    title: "Shogun Japanese Steakhouse Naperville",
+    ogTitle: "Shogun Japanese STeakhouse Naperville",
+    description: "Say something about the restaurant",
+    ogDescription: "Say something about the restaurant",
+    ogImage: 'png image',
+    twitterCard: 'image',
+})
 
 </script>
 

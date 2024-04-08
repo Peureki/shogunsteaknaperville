@@ -1,3 +1,5 @@
+
+import MobileNavPopup from './MobileNavPopup.vue';
 <template>
     <header>
         <nav class="desktop">
@@ -26,10 +28,34 @@
         <nav class="mobile">
             <NuxtLink to="/menu">Menu</NuxtLink>
             <img src="~/assets/svgs/phone.svg" alt="Phone" title="Phone">
-            <img id="hamburger" src="~/assets/svgs/hamburger.svg" alt="Hamburger" title="Hamburger">
         </nav>
+
+        <div @click="mobileNavToggle = !mobileNavToggle" class="hamburger-container">
+            <span :style="{transform: topBun }"></span>
+            <span :style="{backgroundColor: middleBun}"></span>
+            <span :style="{transform: bottomBun}"></span>
+        </div>
     </header>
+
+    <MobileNavPopup v-if="mobileNavToggle"/>
 </template>
+
+<script setup>
+// Toggle when users click on the mobile red cta to open up the full nav menu
+const mobileNavToggle = ref(false); 
+// When mobileNavToggle is true/false => then animate the hamburger to an X and vise versa
+const topBun = computed(() => {
+    return mobileNavToggle.value ? `rotate(45deg) translate(6px, 7px)` : `unset`;
+}),
+    middleBun = computed(() => {
+        return mobileNavToggle.value ? `var(--clr-cta-bkg)` : `var(--clr-text)`;
+    }),
+    bottomBun = computed(() => {
+        return mobileNavToggle.value ? `rotate(-45deg) translate(6px, -7px)` : 'unset';
+    })
+
+
+</script>
 
 <style scoped>
 nav.desktop, nav.mobile{
@@ -39,8 +65,8 @@ nav.desktop, nav.mobile{
     width: 100%;
     background-color: var(--clr-bkg);
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 50px;
     border-bottom: 1px solid var(--clr-border-fade);
     padding-inline: var(--padding-page);
     padding-block: var(--padding-block-nav);
@@ -50,13 +76,30 @@ nav.mobile img{
     width: var(--svg-size-nav);
     cursor: pointer;
 }
-#hamburger::before{
+.hamburger-container{
+    position: fixed;
+    top: calc(var(--padding-block-nav) + 5px);
+    right: var(--padding-page);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 10002;
+    cursor: pointer;
+}
+.hamburger-container span{
+    width: 30px;
+    height: 4px;
+    background-color: var(--clr-text);
+    transition: var(--transition-cta);
+}
+
+.hamburger-container::before{
     content: "";
     position: absolute;
     top: 50%;
-    left: 0%;
-    transform: translate(0, -50%);
-    z-index: 10000;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
     width: var(--cta-circle-size);
     height: var(--cta-circle-size);
     border-radius: var(--cta-circle-size);
