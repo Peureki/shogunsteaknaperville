@@ -50,7 +50,7 @@
 <script setup>
 import SakuraFlower1 from "~/assets/svgs/sakura-flower-1.svg"
 
-import Chef1 from "~/assets/imgs/chef-5.png"
+import Chef1 from "~/assets/imgs/chef-5.webp"
 
 </script>
 

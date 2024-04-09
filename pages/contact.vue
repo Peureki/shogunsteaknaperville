@@ -29,7 +29,7 @@
 </template>
 
 <script setup>
-import Chef from '~/assets/imgs/chef-5.png'
+import Chef from '~/assets/imgs/chef-5.webp'
 import SakuraBranch from '~/assets/svgs/sakura-1.svg'
 
 

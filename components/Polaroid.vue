@@ -1,6 +1,6 @@
 <template>
     <div class="polaroid-container" :style="{height: `${polaroidHeight}vw`}">
-        <img :src="src" :alt="alt" :title="title"/>
+        <img :src="src" :alt="alt" :title="title" loading="lazy"/>
     </div>
 </template>
 

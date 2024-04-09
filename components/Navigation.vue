@@ -12,7 +12,7 @@
                 <li><NuxtLink to="/about">About</NuxtLink></li>
                 <li><NuxtLink to="/contact">Contact</NuxtLink></li>
                 <li>
-                    <NuxtLink to="/">
+                    <NuxtLink to="https://www.facebook.com/ShogunSteakNaperville/" target="_blank">
                         <svg id="facebook" width="12" height="25" viewBox="0 0 16 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.1667 18.375H15.125L16.7084 12.0417H11.1667V8.875C11.1667 7.24416 11.1667 5.70833 14.3334 5.70833H16.7084V0.388331C16.1922 0.320248 14.2431 0.166664 12.1848 0.166664C7.88604 0.166664 4.83337 2.79025 4.83337 7.60833V12.0417H0.083374V18.375H4.83337V31.8333H11.1667V18.375Z" fill="white"/>
                         </svg>
@@ -22,8 +22,7 @@
             
             <button class="cta">
                 <div class="cta-phone-container">
-                    <NuxtLink to="/">Call to Reserve</NuxtLink> 
-                    
+                    <a :href="`tel:+1${phone}`">Call to Reserve</a> 
                 </div>
             </button>
         </nav>
@@ -34,7 +33,9 @@
         -->
         <nav class="mobile">
             <NuxtLink to="/menu">Menu</NuxtLink>
-            <img src="~/assets/svgs/phone.svg" alt="Phone" title="Phone">
+            <a :href="`tel:+1${phone}`">
+                <img src="~/assets/svgs/phone.svg" alt="Phone" title="Phone">
+            </a>
         </nav>
         <!--
             *
@@ -76,6 +77,8 @@ const topBun = computed(() => {
         return mobileNavToggle.value ? `rotate(-45deg) translate(6px, -7px)` : 'unset';
     })
 
+let phone = ref('6304160871'),
+    formattedPhone = formatPhoneNumber(phone.value);
 
 </script>
 

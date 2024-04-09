@@ -13,34 +13,17 @@
         </div>
 
         <div class="grid-container" id="info">
-            <div class="hours-container" id="hours-container">
-                <h5>Hours</h5>
-                <ul class="hours">
-                    <li><p>Monday</p><p>Closed</p></li>
-                    <li><p>Tuesday</p><p>Closed</p></li>
-                    <li><p>Wednesday</p><p>1-3PM, 4-30:9PM</p></li>
-                    <li><p>Thursday</p><p>1-3PM, 4:30-9PM</p></li>
-                    <li><p>Friday</p><p>1-3PM, 4:30-9PM</p></li>
-                    <li><p>Saturday</p><p>1-9PM</p></li>
-                    <li><p>Sunday</p><p>4-8:30PM</p></li>
-                </ul>
-            </div>
-
-            <div class="info-container" id="location">
-                <h5>Location</h5>
-                <address>596 Illinois Route 59, Naperville, IL 60540</address>
-            </div>
-
-            <div class="info-container" id="phone">
-                <h5>Phone</h5>
-                <p>630-416-0871</p>
-            </div>
+            <InfoHours id="hours"/>
+            <InfoLocation id="location"/>
+            <InfoPhone id="phone"/>
 
             <div class="info-container" id="socials">
                 <h5>Socials</h5>
+                <NuxtLink to="https://www.facebook.com/ShogunSteakNaperville/" target="_blank">
                 <svg viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.66671 10.2498H8.75004L9.58337 6.9165H6.66671V5.24984C6.66671 4.3915 6.66671 3.58317 8.33337 3.58317H9.58337V0.783171C9.31171 0.747337 8.28587 0.666504 7.20254 0.666504C4.94004 0.666504 3.33337 2.04734 3.33337 4.58317V6.9165H0.833374V10.2498H3.33337V17.3332H6.66671V10.2498Z" fill="#B9B8B8"/>
                 </svg>
+            </NuxtLink>
             </div>
 
             <img id="info-sakura" :src="SakuraFlower" alt="Sakura flower" title="Sakura flower">
@@ -93,39 +76,21 @@ li a{
 #info{
     grid-template-areas: 
         'hours hours hours hours hours hours'
-        'info info info phone phone phone'
+        'location location location phone phone phone'
         'social social social sakura . .'
     ;
 }
-#hours-container{
+#hours{
     grid-area: hours;
 }
-#info{
-    grid-area: info;
+#location{
+    grid-area: location;
 }
 #phone{
     grid-area: phone;
 }
 #socials{
     grid-area: social;
-}
-ul{
-    padding: 0;
-    margin: 0;
-}
-.hours li{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 10px;
-    grid-template-areas: 
-        'day day time time time time'
-    ;
-}
-.hours li > p:first-child{
-    grid-area: day;
-}
-.hours li > p:last-child{
-    grid-area: time;
 }
 #socials svg{
     width: var(--svg-size-facebook);

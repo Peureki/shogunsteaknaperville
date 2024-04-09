@@ -233,16 +233,16 @@
 </template>
 
 <script setup>
-import Chef1 from '~/assets/imgs/chef-1.jpg'
-import Chef2 from '~/assets/imgs/chef-2.png'
-import Polaroidesc from '~/assets/imgs/wall.jpg'
+import Chef1 from '~/assets/imgs/chef-1.webp'
+import Chef2 from '~/assets/imgs/chef-2.webp'
+import Polaroidesc from '~/assets/imgs/wall.webp'
 
-import Onion1 from '~/assets/imgs/onion-1.png'
-import Chef3 from '~/assets/imgs/chef-3.jpg'
-import Chef4 from '~/assets/imgs/chef-4.jpg'
+import Onion1 from '~/assets/imgs/onion-1.webp'
+import Chef3 from '~/assets/imgs/chef-3.webp'
+import Chef4 from '~/assets/imgs/chef-4.webp'
 import Koi1 from '~/assets/svgs/koi-1.svg'
 
-import Chef5 from '~/assets/imgs/chef-5.png'
+import Chef5 from '~/assets/imgs/chef-5.webp'
 import Koi2 from '~/assets/svgs/koi-2.svg'
 
 useHead({

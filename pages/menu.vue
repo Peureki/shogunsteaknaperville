@@ -233,7 +233,7 @@
 </template>
 
 <script setup>
-import HeaderChef from "~/assets/imgs/chef-5.png"
+import HeaderChef from "~/assets/imgs/chef-5.webp"
 import Koi1 from "~/assets/svgs/koi-1.svg"
 import Koi2 from "~/assets/svgs/koi-2.svg"
 import SakuraFlower1 from "~/assets/svgs/sakura-flower-1.svg"
