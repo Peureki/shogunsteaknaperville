@@ -227,6 +227,9 @@ span.title-container{
     --clr-faded-text: #B9B8B8;
     --clr-border-fade: rgba(255, 255, 255, 0.1);
     --clr-polaroid-bkg: #D9D9D9;
+    --clr-error: #ff0033;
+
+    --border-error: 2px solid var(--clr-error);
 
     --font-family-archivo: "Archivo", sans-serif; 
     --font-family-hind-vadodara: "Hind Vadodara", sans-serif;

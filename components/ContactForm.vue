@@ -2,32 +2,32 @@
     <form ref="form" @submit.prevent="sendEmail">
         <div class="grid-form">
             <span id="fName-container">
-                <label for="fName">First name</label>
+                <label for="fName">First Name*</label>
                 <input type="text" id="fName" name="fName">
             </span>
             
             <span id="lName-container">
-                <label for="lName">Last name</label>
+                <label for="lName">Last Name</label>
                 <input type="text" id="lName" name="lName">
             </span>
             
             <span id="email-container">
-                <label for="email">Email</label>
+                <label for="email">Email*</label>
                 <input type="email" id="email" name="email">
             </span>
             
             <span id="phone-container">
-                <label for="phone">Phone</label>
+                <label for="phone">Phone*</label>
                 <input type="tel" id="phone" name="phone">
             </span>
             
             <span id="subject-container">
-                <label for="subject">Subject</label>
+                <label for="subject">Subject*</label>
                 <input type="text" id="subject" name="subject">
             </span>
             
             <span id="message-container">
-                <label for="message">Message</label>
+                <label for="message">Message*</label>
                 <textarea id="message" name="message"></textarea>
             </span>
 
@@ -35,6 +35,8 @@
                 <button class="cta" id="submit">
                     <input type="submit" value="Submit">
                 </button> 
+
+                <a @click="checkEmptyFields">Test Button</a>
 
                 <Transition name="fade">
                     <p v-if="formStatus">{{ formResponse }}</p>
@@ -46,22 +48,14 @@
 
 <script setup>
 import emailjs from '@emailjs/browser'
-import { useReCaptcha } from 'vue-recaptcha-v3';
 
 const form = ref(null),
     formStatus = ref(false),
     formResponse = ref(null);
-const recaptchaInstance = useReCaptcha();
 
-// Get unique token for reCAPTCHA for validation
-// Avoids bots 
-const recaptcha = async () => {
-    await recaptchaInstance?.recaptchaLoaded(); 
+const fName = ref(null),
+    fNameInput = ref(null);
 
-    const token = await recaptchaInstance?.executeRecaptcha('validate_captcha');
-
-    return token; 
-}
 // Update formStatus from true <=> false when form is submitted
 // 
 const updateFormStatus = () => {
@@ -71,11 +65,25 @@ const updateFormStatus = () => {
     }, 1000);
 }
 
+const checkEmptyFields = () => {
+    const isEmpty = true;
+    const borderError = `var(--border-error)`;
+
+    if (!fName.value){
+        fNameInput.value.style.border = `var(--border-error)`;
+    }
+}
+
 // When users submit a form 
 // Validate unique token for recaptcha first
 // Then => send form through emailJS 
 const sendEmail = async () => {
-    const token = await recaptcha(); 
+    const recaptchaInstance = await import('vue-recaptcha-v3')
+        .then(module => module.useReCaptcha());
+    
+    await recaptchaInstance?.recaptchaLoaded();
+
+    const token = await recaptchaInstance?.executeRecaptcha('validate_captcha');
 
     emailjs.sendForm('service_9uaa68k', 'template_eq1t5zc', form.value, {
         publicKey: 'wwsu2_RjRcre7t4NC',

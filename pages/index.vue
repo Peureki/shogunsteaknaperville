@@ -38,8 +38,8 @@
         <Description
             id="desc-about"
             :description="[
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+                'Welcome to Shogun Japanese Steakhouse, a beloved culinary gem nestled in the heart of Naperville, IL. Since opening our doors in 1983, we have proudly served the community with our take on Japanese style hibachi and our signature flavor that has captured many taste buds.',
+                'For over four decades, Shogun Japanese Steakhouse has been a cornerstone of Naperville\'s dining scene, earning a reputation for excellence and dedication to our craft. As pioneers in bringing the art of teppanyaki to the area, we have delighted countless patrons with our delectable dishes.'
             ]"
             cta-message="Learn more about our family"
             cta-to="/about"
@@ -48,7 +48,7 @@
 
         <Polaroid
             id="polaroid-about"
-            :src="Polaroidesc"
+            :src="Wall1"
             alt="Display of polaroid pictures on the restaurant walls of past happy customers"
             title="Polaroid pictures on the restaurant walls of past happy customers"
         />
@@ -91,8 +91,7 @@
             id="desc-menu"
             title="Teppanyaki & Sushi"
             :description="[
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+                'At Shogun, we take great pride in the quality of our hibachi offerings. From our signature sauces, perfectly grilled meats and seafood, fried rice, to an array of fresh vegetables, each ingredient is carefully selected and expertly prepared to ensure a truly memorable dining experience.',
             ]"
             cta-message="View our menu"
             cta-to="/menu"
@@ -144,7 +143,9 @@
         <Description
             id="test-desc"
             title="From our family to yours"
-            :description="['Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.']"
+            :description="[
+                'Whether you\'re celebrating a special occasion, enjoying a night out with friends and family, or simply craving the bold flavors of Japanese hibachi, Shogun Japanese Steakhouse welcomes you with open arms. Join us as we continue our tradition of excellence and culinary innovation, serving our patrons with passion and pride.'
+            ]"
             cta-message="Call to reserve"
             cta-to="phone"
         />
@@ -235,7 +236,7 @@
 <script setup>
 import Chef1 from '~/assets/imgs/chef-1.webp'
 import Chef2 from '~/assets/imgs/chef-2.webp'
-import Polaroidesc from '~/assets/imgs/wall.webp'
+import Wall1 from '~/assets/imgs/wall-1.webp'
 
 import Onion1 from '~/assets/imgs/onion-1.webp'
 import Chef3 from '~/assets/imgs/chef-3.webp'
