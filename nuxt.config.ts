@@ -2,4 +2,5 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
+  plugins: [{src: '~/plugins/google-recaptcha.ts'}],
 })

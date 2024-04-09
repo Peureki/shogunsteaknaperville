@@ -1,5 +1,5 @@
 <template>
-    <form>
+    <form ref="form" @submit.prevent="sendEmail">
         <div class="grid-form">
             <span id="fName-container">
                 <label for="fName">First name</label>
@@ -31,12 +31,71 @@
                 <textarea id="message" name="message"></textarea>
             </span>
 
-            <button class="cta" id="submit">
-                <input type="submit" value="Submit">
-            </button> 
+            <span class="submit-container">
+                <button class="cta" id="submit">
+                    <input type="submit" value="Submit">
+                </button> 
+
+                <Transition name="fade">
+                    <p v-if="formStatus">{{ formResponse }}</p>
+                </Transition>
+            </span>
         </div>
     </form>
 </template>
+
+<script setup>
+import emailjs from '@emailjs/browser'
+import { useReCaptcha } from 'vue-recaptcha-v3';
+
+const form = ref(null),
+    formStatus = ref(false),
+    formResponse = ref(null);
+const recaptchaInstance = useReCaptcha();
+
+// Get unique token for reCAPTCHA for validation
+// Avoids bots 
+const recaptcha = async () => {
+    await recaptchaInstance?.recaptchaLoaded(); 
+
+    const token = await recaptchaInstance?.executeRecaptcha('validate_captcha');
+
+    return token; 
+}
+// Update formStatus from true <=> false when form is submitted
+// 
+const updateFormStatus = () => {
+    formStatus.value = true; 
+    setTimeout(() => {
+        formStatus.value = false; 
+    }, 1000);
+}
+
+// When users submit a form 
+// Validate unique token for recaptcha first
+// Then => send form through emailJS 
+const sendEmail = async () => {
+    const token = await recaptcha(); 
+
+    emailjs.sendForm('service_9uaa68k', 'template_eq1t5zc', form.value, {
+        publicKey: 'wwsu2_RjRcre7t4NC',
+        'g-recaptcha-response': token
+    })
+        .then(() => {
+            updateFormStatus();
+            formResponse.value = 'Success! Form submitted.'
+            console.log('Success');
+        },
+        (error) => {
+            updateFormStatus(); 
+            formResponse.value = 'Error! Form not submitted.'
+            console.log('Failed...', error.text);
+        },
+    );
+}
+
+
+</script>
 
 <style scoped>
 .grid-form{
@@ -47,7 +106,7 @@
         'email email email phone phone phone'
         'subject subject subject subject subject subject'
         'message message message message message message'
-        'submit submit submit . . .'
+        'submit submit submit submit submit submit'
     ;
     grid-column-gap: var(--gap-grid-column);
     grid-row-gap: var(--gap-grid-form-row);
@@ -70,9 +129,7 @@
 #message-container{
     grid-area: message;
 }
-#submit{
-    grid-area: submit;
-}
+
 
 
 label, input, textarea{
@@ -86,6 +143,12 @@ span {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+span.submit-container{
+    grid-area: submit;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
 }
 label{
     color: var(--clr-text);

@@ -5,7 +5,8 @@
         <p v-for="(paragraph, index) in description" :key="index">{{ paragraph }}</p>
 
         <button v-if="ctaMessage && ctaTo" class="cta">
-            <NuxtLink :to="ctaTo">{{ ctaMessage }}</NuxtLink>
+            <NuxtLink v-if="ctaTo !== 'phone'" :to="ctaTo">{{ ctaMessage }}</NuxtLink>
+            <a v-else :href="`tel:+1${phone}`">{{ ctaMessage }}</a>
         </button>
     </div>
 </template>
@@ -18,5 +19,8 @@ const props = defineProps({
     ctaMessage: String,
     ctaTo: String, 
 })
+
+let phone = ref('6304160871'),
+    formattedPhone = formatPhoneNumber(phone.value);
 
 </script>

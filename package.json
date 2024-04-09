@@ -10,8 +10,10 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "nuxt": "^3.11.1",
     "vue": "^3.4.21",
+    "vue-recaptcha-v3": "^2.0.1",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
