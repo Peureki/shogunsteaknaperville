@@ -229,23 +229,7 @@ span.title-container{
  .fade-leave-to {
    opacity: 0;
  }
-/* 
- *
- * PEU.DEV
- *
- */
-.peu-cta{
-    cursor: pointer;
-}
-.peu-green{
-    color: var(--clr-peu-green);
-}
-.peu-blue{
-    color: var(--clr-peu-blue);
-}
-.peu-pink{
-    color: var(--clr-peu-pink);
-}
+
 :root{
     --clr-bkg: #171314; 
     --clr-cta-bkg: #DB0505;

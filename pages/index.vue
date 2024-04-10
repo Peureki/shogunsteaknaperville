@@ -257,23 +257,40 @@ import Koi1 from '~/assets/svgs/koi-1.svg'
 import Chef5 from '~/assets/imgs/chef-5.webp'
 import Koi2 from '~/assets/svgs/koi-2.svg'
 
+import Logo1 from '~/assets/imgs/logo-1.webp'
+import Favicon from '~/assets/imgs/favicon.png'
+import Logo from '~/components/Logo.vue'
+
 useHead({
-    title: "Shogun Japanese Steakhouse Naperville",
+    htmlAttrs: {
+        lang: 'en'
+    },
     meta: [
         {
-            name: '',
-            content: ''
+            name: 'Shogun Japanese Steakhouse Naperville',
+            content: 'Discover Shogun Japanese Steakhouse in Naperville, IL, where culinary excellence meets Japanese hibachi tradition. With over four decades of delighting diners, Shogun invites you to savor signature flavors, expertly grilled meats, and a memorable dining experience steeped in passion and pride.',
+        }
+    ],
+    link: [
+        {
+            rel: 'icon',
+            type: 'image/png',
+            href: Favicon
         }
     ]
 })
 
 useSeoMeta({
     title: "Shogun Japanese Steakhouse Naperville",
-    ogTitle: "Shogun Japanese STeakhouse Naperville",
-    description: "Say something about the restaurant",
-    ogDescription: "Say something about the restaurant",
-    ogImage: 'png image',
-    twitterCard: 'image',
+    description: 'Discover Shogun Japanese Steakhouse in Naperville, IL, where culinary excellence meets Japanese hibachi tradition. With over four decades of delighting diners, Shogun invites you to savor signature flavors, expertly grilled meats, and a memorable dining experience steeped in passion and pride.',
+    ogTitle: "Shogun Japanese Steakhouse Naperville",
+    ogDescription: 'Discover Shogun Japanese Steakhouse in Naperville, IL, where culinary excellence meets Japanese hibachi tradition. With over four decades of delighting diners, Shogun invites you to savor signature flavors, expertly grilled meats, and a memorable dining experience steeped in passion and pride.',
+    ogImage: Logo1,
+    ogUrl: 'https://shogunsteaknaperville.com/',
+    twitterTitle: 'Shogun Japanese Steakhouse Naperville',
+    twitterDescription: 'Discover Shogun Japanese Steakhouse in Naperville, IL, where culinary excellence meets Japanese hibachi tradition. With over four decades of delighting diners, Shogun invites you to savor signature flavors, expertly grilled meats, and a memorable dining experience steeped in passion and pride.',
+    twitterImage: Logo1,
+    twitterCard: 'Discover Shogun Japanese Steakhouse in Naperville, IL, where culinary excellence meets Japanese hibachi tradition. With over four decades of delighting diners, Shogun invites you to savor signature flavors, expertly grilled meats, and a memorable dining experience steeped in passion and pride.'
 })
 
 
