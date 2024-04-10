@@ -1,9 +1,11 @@
 <template>
-    <form ref="form" @submit.prevent="sendEmail">
+    <form ref="form" @submit.prevent="checkEmptyFields">
         <div class="grid-form">
             <span id="fName-container">
-                <label for="fName">First Name*</label>
-                <input type="text" id="fName" name="fName">
+                <ClientOnly>
+                    <label for="fName">First Name*</label>
+                    <input type="text" id="fName" name="fName" v-model="formData.fName" ref="fName">
+                </ClientOnly>
             </span>
             
             <span id="lName-container">
@@ -12,31 +14,37 @@
             </span>
             
             <span id="email-container">
-                <label for="email">Email*</label>
-                <input type="email" id="email" name="email">
+                <ClientOnly>
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" v-model="formData.email" ref="email">
+                </ClientOnly>
             </span>
             
             <span id="phone-container">
-                <label for="phone">Phone*</label>
-                <input type="tel" id="phone" name="phone">
+                <ClientOnly>
+                    <label for="phone">Phone*</label>
+                    <input type="tel" id="phone" name="phone" v-model="formData.phone" ref="phone">
+                </ClientOnly>
             </span>
             
             <span id="subject-container">
-                <label for="subject">Subject*</label>
-                <input type="text" id="subject" name="subject">
+                <ClientOnly>
+                    <label for="subject">Subject*</label>
+                    <input type="text" id="subject" name="subject" v-model="formData.subject" ref="subject">
+                </ClientOnly>
             </span>
             
             <span id="message-container">
-                <label for="message">Message*</label>
-                <textarea id="message" name="message"></textarea>
+                <ClientOnly>
+                    <label for="message">Message*</label>
+                    <textarea id="message" name="message" v-model="formData.message" ref="message"></textarea>
+                </ClientOnly>
             </span>
 
             <span class="submit-container">
                 <button class="cta" id="submit">
                     <input type="submit" value="Submit">
                 </button> 
-
-                <a @click="checkEmptyFields">Test Button</a>
 
                 <Transition name="fade">
                     <p v-if="formStatus">{{ formResponse }}</p>
@@ -51,10 +59,22 @@ import emailjs from '@emailjs/browser'
 
 const form = ref(null),
     formStatus = ref(false),
-    formResponse = ref(null);
+    formResponse = ref(null),
+    formIsEmpty = ref(true);
+
+const formData = ref({
+    fName: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: '',
+})
 
 const fName = ref(null),
-    fNameInput = ref(null);
+    email = ref(null),
+    phone = ref(null),
+    subject = ref(null),
+    message = ref(null);
 
 // Update formStatus from true <=> false when form is submitted
 // 
@@ -62,15 +82,39 @@ const updateFormStatus = () => {
     formStatus.value = true; 
     setTimeout(() => {
         formStatus.value = false; 
-    }, 1000);
+    }, 3000);
+}
+// Check if any form data from formData is empty
+// If empty, means client has not filled a required field
+const checkAnyEmptyFormData = () => {
+    for (const key in formData.value){
+        if (!formData.value[key]){
+            return true;
+        }
+    } 
+    return false; 
 }
 
 const checkEmptyFields = () => {
-    const isEmpty = true;
     const borderError = `var(--border-error)`;
+    // Check if the formData value is empty
+    // If empty => change to red border for the <input> 
+    // If !empty => return or remain regular border
+    fName.value.style.border = !formData.value.fName ? borderError : 'none';
+    email.value.style.border = !formData.value.email ? borderError : 'none';
+    phone.value.style.border = !formData.value.phone ? borderError : 'none';
+    subject.value.style.border = !formData.value.subject ? borderError : 'none';
+    message.value.style.border = !formData.value.message ? borderError : 'none';
 
-    if (!fName.value){
-        fNameInput.value.style.border = `var(--border-error)`;
+    // Check if form is empty 
+    formIsEmpty.value = checkAnyEmptyFormData(); 
+    // If form is empty => show message to alert user that theyre missing fields
+    // else => send the email
+    if (formIsEmpty.value){
+        updateFormStatus(); 
+        formResponse.value = 'Missing * fields';
+    } else {
+        sendEmail(); 
     }
 }
 
@@ -92,7 +136,7 @@ const sendEmail = async () => {
         .then(() => {
             updateFormStatus();
             formResponse.value = 'Success! Form submitted.'
-            console.log('Success');
+            console.log('Successful form submission');
         },
         (error) => {
             updateFormStatus(); 

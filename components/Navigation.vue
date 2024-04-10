@@ -13,8 +13,8 @@
                 <li><NuxtLink to="/contact">Contact</NuxtLink></li>
                 <li>
                     <NuxtLink to="https://www.facebook.com/ShogunSteakNaperville/" target="_blank">
-                        <svg id="facebook" width="12" height="25" viewBox="0 0 16 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.1667 18.375H15.125L16.7084 12.0417H11.1667V8.875C11.1667 7.24416 11.1667 5.70833 14.3334 5.70833H16.7084V0.388331C16.1922 0.320248 14.2431 0.166664 12.1848 0.166664C7.88604 0.166664 4.83337 2.79025 4.83337 7.60833V12.0417H0.083374V18.375H4.83337V31.8333H11.1667V18.375Z" fill="white"/>
+                        <svg id="facebook" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.66671 10.2498H8.75004L9.58337 6.9165H6.66671V5.24984C6.66671 4.3915 6.66671 3.58317 8.33337 3.58317H9.58337V0.783171C9.31171 0.747337 8.28587 0.666504 7.20254 0.666504C4.94004 0.666504 3.33337 2.04734 3.33337 4.58317V6.9165H0.833374V10.2498H3.33337V17.3332H6.66671V10.2498Z" fill="var(--clr-text)"/>
                         </svg>
                     </NuxtLink>
                 </li>
@@ -136,6 +136,7 @@ nav.mobile img{
 }
 #facebook{
     width: var(--svg-size-facebook);
+    transform: translateY(5px);
 }
 /*
  *

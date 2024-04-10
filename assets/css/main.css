@@ -243,14 +243,13 @@ span.title-container{
     --font-size-h3: clamp(2.5rem, 3.5vw, 15rem);
     --font-size-h4: clamp(2rem, 2.5vw, 10rem);
     --font-size-h5: clamp(2rem, 2vw, 8rem);
-    --font-size-p: clamp(1rem, 1.2vw, 2rem);
+    --font-size-p: clamp(1rem, 1.3vw, 2rem);
     --font-size-testimonials: clamp(0.9rem, 1.1vw, 1.7rem);
     --font-size-logo-circle: clamp(1.2rem, 3vw, 5rem); /* Similar to font size h1 */
     --font-size-cta: clamp(1.1rem, 2.5vw, 3rem);
     --font-size-nav: clamp(1.1rem, 2.5vw, 3rem);
 
-    --svg-size-facebook: clamp(1rem, 1.2vw, 3rem);
-    
+    --svg-size-facebook: clamp(1rem, 1.3vw, 3rem);
     --svg-size-nav: clamp(2rem, 5vw, 8rem);
 
     --cta-circle-size: clamp(3rem, 5vw, 8rem);

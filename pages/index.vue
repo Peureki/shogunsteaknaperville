@@ -121,21 +121,21 @@
 
         <Polaroid
             id="polaroid-test-chef-2"
-            :src="Chef5"
-            alt="Chef casting fire on the grill"
-            title="Chef casting fire on the grill"
+            :src="Onion2"
+            alt="Onion volcano"
+            title="Onion volcano"
             height="15"
         />
         <Polaroid
             id="polaroid-test-chef-3"
-            :src="Chef5"
+            :src="Restaurant1"
             alt="Chef casting fire on the grill"
             title="Chef casting fire on the grill"
             height="30"
         />
         <Polaroid
             id="polaroid-test-chef-4"
-            :src="Chef5"
+            :src="Wall2"
             alt="Chef casting fire on the grill"
             title="Chef casting fire on the grill"
         />
@@ -164,7 +164,7 @@
 
         <Polaroid
             id="polaroid-test-chef-5"
-            :src="Chef5"
+            :src="Food1"
             alt="Chef casting fire on the grill"
             title="Chef casting fire on the grill"
             height="15"
@@ -183,7 +183,7 @@
 
         <Polaroid
             id="polaroid-test-chef-6"
-            :src="Chef5"
+            :src="Chef1"
             alt="Chef casting fire on the grill"
             title="Chef casting fire on the grill"
             height="15"
@@ -206,7 +206,7 @@
 
         <Polaroid
             id="polaroid-test-chef-7"
-            :src="Chef5"
+            :src="Chef2"
             alt="Chef casting fire on the grill"
             title="Chef casting fire on the grill"
             height="15"
@@ -226,7 +226,7 @@
         <Description 
             id="contact-desc"
             title="Connect with us"
-            :description="['Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.']"
+            :description="['We\'d love to hear from you! Whether you have a question or feedback, please fill out the form below. Our team at Shogun Japanese Steakhouse is dedicated to providing exceptional service and ensuring your dining experience is memorable. Thank you for checking out our restaurant!']"
         />
         <ContactForm id="contact-form"/>
         <img id="contact-sakura" src="~/assets/svgs/sakura-2.svg" alt="Sakura tree branch" title="Sakura tree branch"> 
@@ -236,9 +236,20 @@
 <script setup>
 import Chef1 from '~/assets/imgs/chef-1.webp'
 import Chef2 from '~/assets/imgs/chef-2.webp'
+
 import Wall1 from '~/assets/imgs/wall-1.webp'
+import Wall2 from '~/assets/imgs/wall-2.webp'
 
 import Onion1 from '~/assets/imgs/onion-1.webp'
+import Onion2 from '~/assets/imgs/onion-2.webp'
+
+import Restaurant1 from '~/assets/imgs/restaurant-1.webp'
+import Restaurant2 from '~/assets/imgs/restaurant-2.webp'
+
+import Front1 from '~/assets/imgs/front-1.webp'
+
+import Food1 from '~/assets/imgs/food-1.webp'
+
 import Chef3 from '~/assets/imgs/chef-3.webp'
 import Chef4 from '~/assets/imgs/chef-4.webp'
 import Koi1 from '~/assets/svgs/koi-1.svg'

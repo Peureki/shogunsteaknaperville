@@ -96,7 +96,7 @@
 
         <Polaroid
             id="combo-polaroid"
-            :src="HeaderChef"
+            :src="Food1"
             alt="Hibachi chef cooking with high flames" 
             title="Hibachi chef cooking with high flames"
         />
@@ -183,7 +183,7 @@
 
         <Polaroid
             id="wine-and-beer-polaroid"
-            :src="HeaderChef"
+            :src="Onion1"
             alt="Hibachi chef cooking with high flames" 
             title="Hibachi chef cooking with high flames"
         />
@@ -234,6 +234,10 @@
 
 <script setup>
 import HeaderChef from "~/assets/imgs/chef-5.webp"
+
+import Food1 from '~/assets/imgs/food-1.webp'
+import Onion1 from '~/assets/imgs/onion-1.webp'
+
 import Koi1 from "~/assets/svgs/koi-1.svg"
 import Koi2 from "~/assets/svgs/koi-2.svg"
 import SakuraFlower1 from "~/assets/svgs/sakura-flower-1.svg"
