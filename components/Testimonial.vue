@@ -1,7 +1,6 @@
 <template>
-    <div class="testimonial-container">
+    <div class="testimonial-container" :style="{transform: randomRotate}">
         <p v-for="(paragraph, index) in message" :key="index">{{ paragraph }}</p>
-
     </div>
 </template>
 
@@ -9,6 +8,14 @@
 
 const props = defineProps({
     message: Array,
+})
+
+// Randomly rotate a polaroid from range of -2 to 2 deg 
+const randomRotate = ref(null),
+    randomNum = Math.random() * 4 - 2;
+
+onMounted(() => {
+    randomRotate.value = `rotate(${randomNum}deg)`;
 })
 
 </script>

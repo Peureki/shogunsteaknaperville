@@ -10,7 +10,7 @@
             <h5>Socials</h5>
             <NuxtLink to="https://www.facebook.com/ShogunSteakNaperville/" target="_blank">
                 <svg viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.66671 10.2498H8.75004L9.58337 6.9165H6.66671V5.24984C6.66671 4.3915 6.66671 3.58317 8.33337 3.58317H9.58337V0.783171C9.31171 0.747337 8.28587 0.666504 7.20254 0.666504C4.94004 0.666504 3.33337 2.04734 3.33337 4.58317V6.9165H0.833374V10.2498H3.33337V17.3332H6.66671V10.2498Z" fill="#B9B8B8"/>
+                    <path class="cta-hover" d="M6.66671 10.2498H8.75004L9.58337 6.9165H6.66671V5.24984C6.66671 4.3915 6.66671 3.58317 8.33337 3.58317H9.58337V0.783171C9.31171 0.747337 8.28587 0.666504 7.20254 0.666504C4.94004 0.666504 3.33337 2.04734 3.33337 4.58317V6.9165H0.833374V10.2498H3.33337V17.3332H6.66671V10.2498Z" fill="#B9B8B8"/>
                 </svg>
             </NuxtLink>
         </div>
@@ -24,7 +24,16 @@
             </div>
 
             <div class="made-by">
-                <p>Website made with love by <span>peu.dev</span></p>
+                <p>Website made with love by 
+                    <a id="peu" href="https://peu.dev/" target="_blank">
+                        <span class="cta-hover">
+                            <span class="peu-green">peu</span>
+                            <span class="peu-pink">.</span>
+                            <span class="peu-blue">dev</span>
+                        </span>
+                    </a>
+                    
+                </p>
             </div>
         </div>
 
@@ -40,6 +49,32 @@
 footer{
     background-color: var(--clr-bkg);
     z-index: 1000;
+}
+/* 
+ *
+ * PEU.DEV
+ *
+ */
+ .peu-cta{
+    cursor: pointer;
+}
+.peu-green{
+    color: var(--clr-peu-green);
+}
+.peu-blue{
+    color: var(--clr-peu-blue);
+}
+.peu-pink{
+    color: var(--clr-peu-pink);
+}
+.peu-other{
+    color: var(--clr-faded-text);
+}
+a#peu{
+    font-family: var(--font-family-karla);
+    font-size: var(--font-size-p);
+    font-weight: unset;
+
 }
 .grid-container{
     position: relative;
@@ -121,6 +156,22 @@ footer{
 .made-by{
     grid-area: made-by;
     text-align: right;
+}
+@media screen and (max-width: 768px){
+    .credits-container{
+        grid-template-areas: 
+            'copyright copyright copyright copyright copyright copyright'
+            'made-by made-by made-by made-by made-by made-by'
+        ;
+        grid-column-gap: unset;
+        grid-row-gap: 20px;
+    }
+    .copyright{
+        flex-direction: row-reverse;
+    }
+    .made-by{
+        text-align: left;
+    }
 }
 /*
  * 

@@ -1,5 +1,5 @@
 <template>
-    <div class="polaroid-container" :style="{height: `${polaroidHeight}vw`}">
+    <div class="polaroid-container" :style="{height: `${polaroidHeight}vw`, transform: randomRotate}">
         <img :src="src" :alt="alt" :title="title" loading="lazy"/>
     </div>
 </template>
@@ -13,7 +13,16 @@ const props = defineProps({
     height: String,
 })
 
-console.log(props.src);
+const randomRotate = ref(null),
+    randomNum = Math.random() * 4 - 2;
+
+onMounted(() => {
+    randomRotate.value = `rotate(${randomNum}deg)`;
+})
+
+// Randomly rotate a polaroid from range of -2 to 2 deg 
+
+
 // By default, polaroid w & h are 100% and follow the display:grid content size
 // But for polaroids that need a fixed w & h to fill space because there's no content, then display that custom w & h number
 const polaroidHeight = computed(() => {
@@ -28,6 +37,7 @@ const polaroidHeight = computed(() => {
     background-color: var(--clr-polaroid-bkg);
     width: 100%;
     height: 100%;
+    transition: var(--transition-transform);
 }
 .polaroid-container img{
     position: absolute;

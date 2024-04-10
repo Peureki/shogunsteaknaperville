@@ -129,15 +129,15 @@
         <Polaroid
             id="polaroid-test-chef-3"
             :src="Restaurant1"
-            alt="Chef casting fire on the grill"
-            title="Chef casting fire on the grill"
+            alt="View of the restaurant inside"
+            title="View of the restaurant inside"
             height="30"
         />
         <Polaroid
             id="polaroid-test-chef-4"
             :src="Wall2"
-            alt="Chef casting fire on the grill"
-            title="Chef casting fire on the grill"
+            alt="Wall of polaroid pictures of happy customers"
+            title="Wall of polaroid pictures of happy customers"
         />
 
         <Description
@@ -165,8 +165,8 @@
         <Polaroid
             id="polaroid-test-chef-5"
             :src="Food1"
-            alt="Chef casting fire on the grill"
-            title="Chef casting fire on the grill"
+            alt="Food sizzling on the grill"
+            title="Food sizzling on the grill"
             height="15"
         />
 

@@ -94,6 +94,18 @@ a {
     font-size: var(--font-size-nav);
     font-weight: var(--font-weight-archivo);
     color: var(--clr-text);
+    transition: var(--transition-cta);
+}
+path {
+    transition: var(--transition-cta);
+}
+/* 
+ * Specifically for the nav
+ * Every other cta has a ::before circle effect
+ */
+li > a:hover, .cta-hover:hover{
+    color: var(--clr-cta-bkg);
+    fill: var(--clr-cta-bkg);
 }
 
 .router-link-exact-active, a{
@@ -217,6 +229,23 @@ span.title-container{
  .fade-leave-to {
    opacity: 0;
  }
+/* 
+ *
+ * PEU.DEV
+ *
+ */
+.peu-cta{
+    cursor: pointer;
+}
+.peu-green{
+    color: var(--clr-peu-green);
+}
+.peu-blue{
+    color: var(--clr-peu-blue);
+}
+.peu-pink{
+    color: var(--clr-peu-pink);
+}
 :root{
     --clr-bkg: #171314; 
     --clr-cta-bkg: #DB0505;
@@ -228,6 +257,9 @@ span.title-container{
     --clr-border-fade: rgba(255, 255, 255, 0.1);
     --clr-polaroid-bkg: #D9D9D9;
     --clr-error: #ff0033;
+    --clr-peu-green: #26f527;
+    --clr-peu-blue: #0abcf7;
+    --clr-peu-pink: #ff1178;
 
     --border-error: 2px solid var(--clr-error);
 
@@ -273,6 +305,7 @@ span.title-container{
     --margin-inline-logo-circle: clamp(0.3rem, 1vw, 1rem);
 
     --transition-cta: 0.3s ease all; 
+    --transition-transform: 0.3s ease transform;
 
     --img-size-samurai: clamp(10rem, 30vw, 35rem);
 

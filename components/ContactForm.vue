@@ -112,7 +112,7 @@ const checkEmptyFields = () => {
     // else => send the email
     if (formIsEmpty.value){
         updateFormStatus(); 
-        formResponse.value = 'Missing * fields';
+        formResponse.value = 'Missing fields *';
     } else {
         sendEmail(); 
     }

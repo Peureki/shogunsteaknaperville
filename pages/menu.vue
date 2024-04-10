@@ -31,7 +31,7 @@
         <MenuList
             id="entree-menu"
             title="Entrees"
-            desc="Dinners include shrimp appetizer, soup, salad, vegetable, steamed rice, noodles (fried rice $2.00 or extra noodles $4.00 additional charge). Extra egg yok or french garlic sauce $3.00"
+            desc="Dinners include shrimp appetizer, soup, salad, vegetable, steamed rice, noodles (fried rice $2.00 or extra noodles $4.00 additional charge). Extra egg yolk or french garlic sauce $3.00"
             :items="[
                 ['Chicken Teriyaki', false, '$19.95'],
                 ['Glazed Honey Chicken', '(spicy)', '$19.95'],
@@ -59,7 +59,7 @@
         <MenuList
             id="combo-for-two"
             title="Dinner For Two"
-            desc="Dinners include shrimp appetizer, soup, salad, vegetable, steamed rice, noodles (fried rice $2.00 or extra noodles $4.00 additional charge). Extra egg yok or french garlic sauce $3.00. Share charge $5.00"
+            desc="Dinners include shrimp appetizer, soup, salad, vegetable, steamed rice, noodles (fried rice $2.00 or extra noodles $4.00 additional charge). Extra egg yolk or french garlic sauce $3.00. Share charge $5.00"
             :items="[
                 ['Lobster with Hibachi Sirloin Steak', '(egg yolk, garlic, hibachi, filet mignon for $5 extra each)', '$91.95'],
                 ['Lobster and Filet Mignon', false, '$89.95'],
@@ -71,7 +71,7 @@
         <CombinationList
             id="combinations"
             title="Combinations"
-            desc="Dinners include shrimp appetizer, soup, salad, vegetable, steamed rice, noodles (fried rice $2.00 or extra noodles $4.00 additional charge). Extra egg yok or french garlic sauce $3.00. Share charge $5.00"
+            desc="Dinners include shrimp appetizer, soup, salad, vegetable, steamed rice, noodles (fried rice $2.00 or extra noodles $4.00 additional charge). Extra egg yolk or french garlic sauce $3.00. Share charge $5.00"
             :combo-items="[
                 {
                     main: 'Hibachi Sirloin Steak',

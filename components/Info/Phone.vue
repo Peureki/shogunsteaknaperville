@@ -1,7 +1,7 @@
 <template>
     <div class="info-container">
         <h5>Phone</h5>
-        <a :href="`tel:+1${phone}`"><p>{{ formattedPhone }}</p></a>
+        <a :href="`tel:+1${phone}`"><p class="cta-hover">{{ formattedPhone }}</p></a>
     </div>
 </template>
 
