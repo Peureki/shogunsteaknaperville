@@ -82,7 +82,7 @@ button, input[type="Submit"]{
     cursor: pointer;
 }
 
-button a, input[type="Submit"]{
+button, input[type="Submit"]{
     color: var(--clr-text);
     font-family: var(--font-family-archivo);
     font-size: var(--font-size-cta);
@@ -103,9 +103,13 @@ path {
  * Specifically for the nav
  * Every other cta has a ::before circle effect
  */
-li > a:hover, .cta-hover:hover{
+li > a:hover, .cta-hover:hover,
+li > a:focus, .cta-hover:focus{
     color: var(--clr-cta-bkg);
     fill: var(--clr-cta-bkg);
+}
+.cta-hover{
+    transition: var(--transition-cta);
 }
 
 .router-link-exact-active, a{
@@ -146,7 +150,10 @@ section.grid-container{
  *
  */
 .cta{
+    position: relative;
+    width: fit-content;
     padding: 20px;
+    cursor: pointer;
 }
 .cta::before{
     content: "";
@@ -161,7 +168,7 @@ section.grid-container{
     background-color: var(--clr-cta-bkg);
     transition: var(--transition-cta);
 }
-.cta:hover::before {
+.cta:hover::before, .cta:focus::before {
     width: 100%; 
 }
 

@@ -52,6 +52,33 @@ import SakuraFlower1 from "~/assets/svgs/sakura-flower-1.svg"
 
 import Chef1 from "~/assets/imgs/chef-5.webp"
 
+import Logo1 from '~/assets/imgs/logo-1.webp'
+
+const seoTitle = 'About - Shogun Japanese Steakhouse Naperville',
+    seoDescription = 'Savor the culinary excellence of Shogun Japanese Steakhouse in Naperville, IL, blending tradition with hibachi and signature flavors for a memorable dining experience.';
+
+useHead({
+    meta: [
+        {
+            name: seoTitle,
+            content: seoDescription,
+        }
+    ],
+})
+
+useSeoMeta({
+    title: seoTitle,
+    description: seoDescription,
+    ogTitle: seoTitle,
+    ogDescription: seoDescription,
+    ogImage: Logo1,
+    ogUrl: 'https://shogunsteaknaperville.com/menu',
+    twitterTitle: seoTitle,
+    twitterDescription: seoDescription,
+    twitterImage: Logo1,
+    twitterCard: seoDescription
+})
+
 </script>
 
 <style scoped>
@@ -72,7 +99,7 @@ import Chef1 from "~/assets/imgs/chef-5.webp"
 }
 #header-polaroid{
     grid-area: polaroid;
-    height: 30vw;
+    height: 20vw;
 }
 #header-sakura-flower{
     grid-area: sakura;

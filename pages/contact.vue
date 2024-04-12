@@ -33,6 +33,33 @@ import Chef from '~/assets/imgs/chef-5.webp'
 import Front from '~/assets/imgs/front-1.webp'
 import SakuraBranch from '~/assets/svgs/sakura-1.svg'
 
+import Logo1 from '~/assets/imgs/logo-1.webp'
+
+const seoTitle = 'Contact - Shogun Japanese Steakhouse Naperville',
+    seoDescription = 'Contact us today to share your questions or feedback! At Shogun Japanese Steakhouse, we\'re committed to delivering outstanding service and creating unforgettable dining moments for you. Thank you for exploring our hibachi and sushi restaurant';
+
+useHead({
+    meta: [
+        {
+            name: seoTitle,
+            content: seoDescription,
+        }
+    ],
+})
+
+useSeoMeta({
+    title: seoTitle,
+    description: seoDescription,
+    ogTitle: seoTitle,
+    ogDescription: seoDescription,
+    ogImage: Logo1,
+    ogUrl: 'https://shogunsteaknaperville.com/menu',
+    twitterTitle: seoTitle,
+    twitterDescription: seoDescription,
+    twitterImage: Logo1,
+    twitterCard: seoDescription
+})
+
 
 </script>
 
