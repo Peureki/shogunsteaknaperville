@@ -20,6 +20,8 @@
 
         <img id="header-sakura-flower" :src="SakuraFlower1" alt="Sakura flower" title="Sakura flower">
 
+        <NuxtLink class="cta" id="pdf" to="/Shogun_Menu.pdf" target="_blank">View PDF Menu</NuxtLink>
+
         <div class="anchor-container">
             <Anchor to="entrees" name="Entrees"/>
             <Anchor to="dinner-for-two" name="Dinner For Two"/>
@@ -301,7 +303,8 @@ useSeoMeta({
         '. . . . . . . . polaroid polaroid polaroid polaroid'
         'anchor anchor anchor anchor koi koi . . polaroid polaroid polaroid polaroid'
         'anchor anchor anchor anchor koi koi . . . . . .'
-        'anchor anchor anchor anchor koi koi . sakuraFlower . . . .'
+        'anchor anchor anchor anchor koi koi . . . . . .'
+        'pdf pdf pdf pdf . . . sakuraFlower . . . . '
     ;
 }
 #header-title{
@@ -318,6 +321,10 @@ useSeoMeta({
     grid-area: sakuraFlower;
     width: var(--w-sakura-flower);
 }
+#pdf{
+    grid-area: pdf;
+    font-size: var(--font-size-h5);
+}
 .anchor-container{
     grid-area: anchor;
 }
@@ -333,7 +340,7 @@ useSeoMeta({
            'polaroid polaroid polaroid polaroid . .'
            'polaroid polaroid polaroid polaroid . sakuraFlower'
            'anchor anchor anchor anchor anchor anchor'
-           'anchor anchor anchor anchor anchor anchor'
+           'pdf pdf pdf pdf pdf pdf'
         ;
     }
     #header-polaroid{
