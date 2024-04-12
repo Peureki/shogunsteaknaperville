@@ -19,6 +19,18 @@
         <img id="header-koi" :src="Koi1" alt="Koi" title="Koi">
 
         <img id="header-sakura-flower" :src="SakuraFlower1" alt="Sakura flower" title="Sakura flower">
+
+        <div class="anchor-container">
+            <Anchor to="entrees" name="Entrees"/>
+            <Anchor to="dinner-for-two" name="Dinner For Two"/>
+            <Anchor to="combinations" name="Combinations"/>
+            <Anchor to="sushi" name="Sushi"/>
+            <Anchor to="extras" name="Extras"/>
+            <Anchor to="wine-by-glass" name="Wine by Glass"/>
+            <Anchor to="beer-and-sake" name="Beer & Sake"/>
+            <Anchor to="house-cocktails" name="House Cocktails"/>
+            <Anchor to="soft-drinks" name="Soft Drinks"/>
+        </div>
     </section>
     <!--
         *
@@ -27,9 +39,9 @@
         *
         *
     -->
-    <section class="grid-container" id="entree">
+    <section class="grid-container" id="entrees-container">
         <MenuList
-            id="entree-menu"
+            id="entrees"
             title="Entrees"
             desc="Dinners include shrimp appetizer, soup, salad, vegetable, steamed rice, noodles (fried rice $2.00 or extra noodles $4.00 additional charge). Extra egg yolk or french garlic sauce $3.00"
             :items="[
@@ -37,7 +49,7 @@
                 ['Glazed Honey Chicken', '(spicy)', '$19.95'],
                 ['Hibachi Sirloin Steak', false, '$24.95'],
                 ['Filet Mignon', false, '$28.95'],
-                ['Sesame Scallops', false, '$27.95'],
+                ['Sesame Scallops', false, '$28.95'],
                 ['Shrimp', '(egg yolk, french garlic, or hibachi)', '$24.95'],
                 ['Salmon Teriyaki', false, '$24.95'],
                 ['Calamari Teriyaki', false, '$24.95'],
@@ -51,19 +63,19 @@
     <!--
         *
         *
-        * COMBINATION SECTION
+        * DINNER FOR TWO && COMBINATION SECTION
         *
         *
     -->
     <section class="grid-container" id="combo">
         <MenuList
-            id="combo-for-two"
+            id="dinner-for-two"
             title="Dinner For Two"
-            desc="Dinners include shrimp appetizer, soup, salad, vegetable, steamed rice, noodles (fried rice $2.00 or extra noodles $4.00 additional charge). Extra egg yolk or french garlic sauce $3.00. Share charge $5.00"
+            desc="Dinners include shrimp appetizer, soup, salad, vegetables, steamed rice, noodles (fried rice $2.00 or extra noodles $4.00 additional charge). Extra egg yolk or french garlic sauce $3.00. Share charge $5.00"
             :items="[
-                ['Lobster with Hibachi Sirloin Steak', '(egg yolk, garlic, hibachi, filet mignon for $5 extra each)', '$91.95'],
+                ['Lobster with Hibachi Sirloin Steak and Shrimp', 'egg yolk, garlic, hibachi, filet mignon upgrade for $5 extra each', '$91.95'],
                 ['Lobster and Filet Mignon', false, '$89.95'],
-                ['Hibachi Sirloin Steak with Teriyaki Chicken and Shrimp ', '(egg yolk, garlic, hibachi, filet mignon for $5 extra each)', '$71.95'],
+                ['Hibachi Sirloin Steak with Teriyaki Chicken and Shrimp ', 'egg yolk, garlic, hibachi, filet mignon upgrade for $5 extra each', '$71.95'],
                 ['Chicken and Shrimp ', false, '$49.95'],
             ]"
         />
@@ -71,7 +83,7 @@
         <CombinationList
             id="combinations"
             title="Combinations"
-            desc="Dinners include shrimp appetizer, soup, salad, vegetable, steamed rice, noodles (fried rice $2.00 or extra noodles $4.00 additional charge). Extra egg yolk or french garlic sauce $3.00. Share charge $5.00"
+            desc="Dinners include shrimp appetizer, soup, salad, vegetables, steamed rice, noodles (fried rice $2.00 or extra noodles $4.00 additional charge). Extra egg yolk or french garlic sauce $3.00. Share charge $5.00"
             :combo-items="[
                 {
                     main: 'Hibachi Sirloin Steak',
@@ -87,9 +99,9 @@
                 },
                 {
                     main: 'Lobster Special',
-                    combo: ['Steak', 'Shrimp', 'Salmon', 'Chicken', 'Calamari', 'Sushi Combo'], 
+                    combo: ['Steak', 'Chicken', 'Shrimp', 'Sushi Combo', 'Lobster'], 
                     sideNote: ['Filet Mignon update for $5 extra', false , false, false, false, false], 
-                    price: ['$30.95', '$28.95', '$28.95', '$28.95', '$28.95', '$28.95']
+                    price: ['$38.95', '$37.95', '$38.95', '$38.95', '$59.95']
                 }
             ]"
         />
@@ -107,40 +119,41 @@
     <!--
         *
         *
-        * SUSHI SECTION
+        * SUSHI && EXTRAS SECTION
         *
         *
     -->
-    <section class="grid-container" id="sushi">
+    <section class="grid-container" id="sushi-container">
         <MenuList
-            id="sushi-menu"
+            id="sushi"
             title="Sushi Entrees"
             desc="**Additional sushi/sashimi options on order form, please ask your server**"
             :items="[
-                ['Sushi 101', '5pcs sushi & 5pcs Shrimp Tempura Roll', '$14.95'],
-                ['American Sushi', '3pcs Tuna, 3pcs Salmon, 3pcs Shrimp, & 5 pcs Califonia Roll', '$19.95'],
+                ['Sushi 101', '5pcs sushi & 5pcs Shrimp Tempura Roll', '$15.95'],
+                ['American Sushi', '3pcs Tuna, 3pcs Salmon, 3pcs Shrimp, & 6 pcs Califonia Roll', '$19.95'],
                 ['Shogun Sushi', '9pcs sushi & 6pcs Spicy Tuna Roll', '$19.95'],
                 ['Makimono Special', 'California Roll, Tuna Roll, Kappa Roll, 6pcs each', '$14.95'],
                 ['Makimono Deluxe', 'California Roll, Spicy Tuna Roll, Shrimp Tempura Roll', '$18.95'],
                 ['Una-Ju', 'Slices of broiled eel over rice with special sauce', '$17.95'],
+                ['Godzilla Roll', 'Deep fried roll with salmon, broiled eel, sweet egg, cream cheese, avocado topped with spicy mayo and sweet sauce', '$17.95']
             ]"
         />
 
         <MenuList
-            id="extras-menu"
+            id="extras"
             title="Extras"
             desc="Add-ons for individual meals only"
             :items="[
                 ['Special Fried Rice', 'Steak, chicken, or shrimp', '$6.95'],
                 ['Noodles', false, '$4.00'],
-                ['Vegetables', false, '$3.00'],
+                ['Vegetables', false, '$4.00'],
                 ['Egg Yolk or French Garlic', false, '$3.00'],
                 ['Teriyaki Sauce', false, '$3.00'],
                 ['Steak', false, '$9.00'],
                 ['Chicken', false, '$9.00'],
                 ['Filet Mignon', false, '$11.00'],
                 ['Shrimp', 'Egg yolk, french garlic, or hibachi', '$9.00'],
-                ['Sea Scallops', false, '$9.00'],
+                ['Sea Scallops', false, '$10.00'],
                 ['Lobster', '8oz', '$28.00'],
             ]"
         />
@@ -158,7 +171,7 @@
     -->
     <section class="grid-container" id="wine-and-beer">
         <MenuList
-            id="wine-menu"
+            id="wine-by-glass"
             title="Wine By Glass"
             :items="[
                 ['Plum Wine', false, '$8.00'],
@@ -169,13 +182,12 @@
         />
 
         <MenuList
-            id="beer-menu"
+            id="beer-and-sake"
             title="Beer and Sake"
             :items="[
                 ['Sapporo', 'Large', '$9.00'],
-                ['Kirin', 'Small', '$5.00'],
-                ['Miller Lite', false, '$5.00'],
-                ['Bud Light', false, '$5.00'],
+                ['Import Beer', 'Kirin, Corona, Heineken', '$6.00'],
+                ['Domestic Beer', 'Miller Lite, Bud Light, Coors', '$5.00'],
                 ['Sake', 'Small', '$5.00'],
                 ['Sake', 'Large', '$9.00']
             ]"
@@ -201,21 +213,7 @@
     -->
     <section class="grid-container" id="drinks-and-cocktails">
         <MenuList
-            id="drinks-menu"
-            title="Soft Drinks"
-            :items="[
-                ['Can Soda', 'Dr. Pepper, Cherry Coke, Mountain Dew', '$1.50'],
-                ['Fountain Soda - Free Refills', 'Coke, Diet Coke, Sprite, Root Beer, Iced Tea *unsweetened*, Lemonade', '$3.00'],
-                ['Hot Tea - Free Refills', false, '$1.50'],
-                ['Ramune', 'Japanese 7Up', '$8.00'],
-                ['Juices', 'Orange, Pineapple, Apple', '$3.00'],
-                ['Chocolate Milk', false, '$3.00'],
-                ['Kiddie Cocktail', false, '$3.00'],
-            ]"
-        />
-
-        <MenuList
-            id="cocktail-menu"
+            id="house-cocktails"
             title="House Cocktail"
             :items="[
                 ['Margarita', false, '$8.00'],
@@ -227,6 +225,22 @@
                 ['Liquors', 'Gin, Whiskey, Vodka, Tequila', '$9.00']
             ]"
         />
+
+        <MenuList
+            id="soft-drinks"
+            title="Soft Drinks"
+            :items="[
+                ['Can Soda', 'Dr. Pepper, Cherry Coke, Mountain Dew', '$2.00'],
+                ['Fountain Soda - Free Refills', 'Coke, Diet Coke, Sprite, Root Beer, Iced Tea *unsweetened*, Lemonade', '$3.00'],
+                ['Hot Tea - Free Refills', false, '$2.00'],
+                ['Ramune', 'Japanese 7Up', '$3.00'],
+                ['Juices', 'Orange, Pineapple, Apple', '$3.00'],
+                ['Chocolate Milk', false, '$3.00'],
+                ['Kiddie Cocktail', false, '$3.00'],
+            ]"
+        />
+
+        
 
     </section>
     
@@ -285,8 +299,9 @@ useSeoMeta({
     grid-template-areas: 
         'title title title title title title . . polaroid polaroid polaroid polaroid'
         '. . . . . . . . polaroid polaroid polaroid polaroid'
-        'koi koi . . . . . . polaroid polaroid polaroid polaroid'
-        'koi koi . . . . . sakuraFlower polaroid polaroid polaroid polaroid'
+        'anchor anchor anchor anchor koi koi . . polaroid polaroid polaroid polaroid'
+        'anchor anchor anchor anchor koi koi . . . . . .'
+        'anchor anchor anchor anchor koi koi . sakuraFlower . . . .'
     ;
 }
 #header-title{
@@ -303,6 +318,9 @@ useSeoMeta({
     grid-area: sakuraFlower;
     width: var(--w-sakura-flower);
 }
+.anchor-container{
+    grid-area: anchor;
+}
 /*
  *
  * MOBILE HEADER SECTION 
@@ -314,6 +332,8 @@ useSeoMeta({
            'title title title title title title'
            'polaroid polaroid polaroid polaroid . .'
            'polaroid polaroid polaroid polaroid . sakuraFlower'
+           'anchor anchor anchor anchor anchor anchor'
+           'anchor anchor anchor anchor anchor anchor'
         ;
     }
     #header-polaroid{
@@ -329,12 +349,12 @@ useSeoMeta({
  * ENTREE SECTION 
  *
  */
-#entree{
+#entrees-container{
     grid-template-areas: 
         'menu menu menu menu menu menu sakura sakura sakura sakura sakura sakura'
     ;
 }
-#entree-menu{
+#entrees{
     grid-area: menu;
 }
 #entree-sakura-branch{
@@ -351,7 +371,7 @@ useSeoMeta({
  *
  */
 @media screen and (max-width: 768px){
-    #entree{
+    #entrees-container{
         grid-template-areas: 
             'menu menu menu menu menu menu'
         ;
@@ -373,7 +393,7 @@ useSeoMeta({
         'polaroid polaroid polaroid polaroid sakura . combo combo combo combo combo combo'
     ;
 }
-#combo-for-two{
+#dinner-for-two{
     grid-area: forTwo;
 }
 #combinations{
@@ -401,16 +421,16 @@ useSeoMeta({
  * SUSHI SECTION 
  *
  */
-#sushi{
+#sushi-container{
     grid-template-areas: 
         'sushi sushi sushi sushi sushi sushi extras extras extras extras extras extras'
         'koi koi . . . . extras extras extras extras extras extras'
     ;   
 }
-#sushi-menu{
+#sushi{
     grid-area: sushi;
 }
-#extras-menu{
+#extras{
     grid-area: extras;
 }
 #koi-menu{
@@ -423,7 +443,7 @@ useSeoMeta({
  *
  */
 @media screen and (max-width: 768px){
-    #sushi{
+    #sushi-container{
         grid-template-areas: 
             'sushi sushi sushi sushi sushi sushi'
             '. . . . . koi'
@@ -443,10 +463,10 @@ useSeoMeta({
         'polaroid polaroid polaroid polaroid . . . . . . . sakura'
     ;
 }
-#wine-menu{
+#wine-by-glass{
     grid-area: wine;
 }
-#beer-menu{
+#beer-and-sake{
     grid-area: beer;
 }
 #wine-and-beer-polaroid{
@@ -481,20 +501,20 @@ useSeoMeta({
  */
 #drinks-and-cocktails{
     grid-template-areas: 
-        'drinks drinks drinks drinks drinks drinks cocktail cocktail cocktail cocktail cocktail cocktail'
+        'cocktail cocktail cocktail cocktail cocktail cocktail drinks drinks drinks drinks drinks drinks '
     ;
 }
-#drinks-menu{
+#soft-drinks{
     grid-area: drinks;
 }
-#cocktail-menu{
+#house-cocktails{
     grid-area: cocktail;
 }
 @media screen and (max-width: 768px){
     #drinks-and-cocktails{
         grid-template-areas: 
-            'drinks drinks drinks drinks drinks drinks'
             'cocktail cocktail cocktail cocktail cocktail cocktail'
+            'drinks drinks drinks drinks drinks drinks' 
         ;
     }
 }

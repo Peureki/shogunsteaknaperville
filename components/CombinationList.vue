@@ -28,8 +28,6 @@ const props = defineProps({
     comboItems: Object,
 })
 
-console.log(props.comboItems);
-
 </script>
 
 <style scoped>

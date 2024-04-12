@@ -20,9 +20,15 @@
                 </li>
             </ul>
             
-            <button class="cta">
+            <button 
+                class="cta" 
+                @mouseover="changeLink" 
+                @mouseleave="resetLink"
+                @focusin="changeLink"
+                @focusout="resetLink"
+            >
                 <div class="cta-phone-container">
-                    <a :href="`tel:+1${phone}`">Call to Reserve</a> 
+                    <a :href="`tel:+1${phone}`">{{ phoneCtaMessage }}</a> 
                 </div>
             </button>
         </nav>
@@ -78,7 +84,16 @@ const topBun = computed(() => {
     })
 
 let phone = ref('6304160871'),
+    phoneCtaMessage = ref('Call to Reserve'),
     formattedPhone = formatPhoneNumber(phone.value);
+
+// When users hover or focus on the phone CTA, change to display the phone number and vise versa
+const changeLink = () => {
+    phoneCtaMessage.value = formattedPhone; 
+}
+const resetLink = () => {
+    phoneCtaMessage.value = 'Call to Reserve';
+}
 
 </script>
 
