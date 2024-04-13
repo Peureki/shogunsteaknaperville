@@ -12,7 +12,7 @@
                 <li><NuxtLink to="/about">About</NuxtLink></li>
                 <li><NuxtLink to="/contact">Contact</NuxtLink></li>
                 <li>
-                    <NuxtLink to="https://www.facebook.com/ShogunSteakNaperville/" target="_blank">
+                    <NuxtLink to="https://www.facebook.com/ShogunSteakNaperville/" target="_blank" aria-lebel="Facebook" title="Facebook">
                         <svg id="facebook" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="cta-hover" d="M6.66671 10.2498H8.75004L9.58337 6.9165H6.66671V5.24984C6.66671 4.3915 6.66671 3.58317 8.33337 3.58317H9.58337V0.783171C9.31171 0.747337 8.28587 0.666504 7.20254 0.666504C4.94004 0.666504 3.33337 2.04734 3.33337 4.58317V6.9165H0.833374V10.2498H3.33337V17.3332H6.66671V10.2498Z" fill="var(--clr-text)"/>
                         </svg>
@@ -49,7 +49,7 @@
             *   TRIGGERS BASED ON TOGGLE mobileNavToggle
             *
         -->
-        <div @click="mobileNavToggle = !mobileNavToggle" class="hamburger-container">
+        <div @click="mobileNavToggle = !mobileNavToggle" class="hamburger-container" :aria-label="hamburgerLabel">
             <span :style="{transform: topBun }"></span>
             <span :style="{backgroundColor: middleBun}"></span>
             <span :style="{transform: bottomBun}"></span>
@@ -73,6 +73,8 @@
 // Toggle when users click on the mobile red cta to open up the full nav menu
 const mobileNavToggle = ref(false); 
 // When mobileNavToggle is true/false => then animate the hamburger to an X and vise versa
+// *
+// Also change aria-label 
 const topBun = computed(() => {
     return mobileNavToggle.value ? `rotate(45deg) translate(6px, 7px)` : `unset`;
 }),
@@ -81,6 +83,9 @@ const topBun = computed(() => {
     }),
     bottomBun = computed(() => {
         return mobileNavToggle.value ? `rotate(-45deg) translate(6px, -7px)` : 'unset';
+    }),
+    hamburgerLabel = computed(() => {
+        return mobileNavToggle.value ? "Open navigation menu" : "Close navigation menu"; 
     })
 
 let phone = ref('6304160871'),

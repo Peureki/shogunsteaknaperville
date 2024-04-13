@@ -130,7 +130,7 @@ const sendEmail = async () => {
     const token = await recaptchaInstance?.executeRecaptcha('validate_captcha');
 
     emailjs.sendForm('service_9uaa68k', 'template_eq1t5zc', form.value, {
-        publicKey: 'wwsu2_RjRcre7t4NC',
+        publicKey: '_QxZZf81pHW_5-jqB',
         'g-recaptcha-response': token
     })
         .then(() => {

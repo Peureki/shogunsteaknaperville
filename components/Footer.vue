@@ -8,7 +8,7 @@
 
         <div class="info-container" id="socials">
             <h5>Socials</h5>
-            <NuxtLink to="https://www.facebook.com/ShogunSteakNaperville/" target="_blank">
+            <NuxtLink to="https://www.facebook.com/ShogunSteakNaperville/" target="_blank" aria-label="Facebook" title="Facebook">
                 <svg viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="cta-hover" d="M6.66671 10.2498H8.75004L9.58337 6.9165H6.66671V5.24984C6.66671 4.3915 6.66671 3.58317 8.33337 3.58317H9.58337V0.783171C9.31171 0.747337 8.28587 0.666504 7.20254 0.666504C4.94004 0.666504 3.33337 2.04734 3.33337 4.58317V6.9165H0.833374V10.2498H3.33337V17.3332H6.66671V10.2498Z" fill="#B9B8B8"/>
                 </svg>
