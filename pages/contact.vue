@@ -8,6 +8,8 @@
             alt="Hibachi Chef"
             title="Hibachi Chef"
         />
+
+        <img id="header-sakura-flower" :src="SakuraFlower" alt="Sakura flower" title="Sakura flower">
     </section>
 
     <section class="grid-container" id="contact">
@@ -31,6 +33,7 @@
 <script setup>
 import Chef from '~/assets/imgs/chef-5.webp'
 import Front from '~/assets/imgs/front-1.webp'
+import SakuraFlower from '~/assets/svgs/sakura-flower-2.svg'
 import SakuraBranch from '~/assets/svgs/sakura-1.svg'
 
 import Logo1 from '~/assets/imgs/logo-1.webp'
@@ -74,7 +77,8 @@ img{
 #header{
     padding-top: var(--padding-outside-nav);
     grid-template-areas: 
-        'title title title title title title title polaroid polaroid polaroid polaroid'
+        'title title title title title title title title polaroid polaroid polaroid polaroid'
+        'sakuraFlower . . . . . . . polaroid polaroid polaroid polaroid'
     ;
 }
 #header-title{
@@ -82,17 +86,21 @@ img{
 }
 #header-polaroid{
     grid-area: polaroid;
-    height: var(--w-polaroid-30);
+    height: 25vw;
+}
+#header-sakura-flower{
+    grid-area: sakuraFlower;
+    width: var(--w-sakura-flower);
 }
 @media screen and (max-width: 768px){
     #header{
         grid-template-areas: 
             'title title title title title title'
+            'polaroid polaroid polaroid polaroid . sakuraFlower'
         ;
     }
     #header-polaroid{
-        grid-area: unset;
-        display: none;
+        height: var(--w-polaroid);
     }
 }
 
