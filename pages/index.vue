@@ -461,6 +461,7 @@ header.grid-container{
         '. . . . . . . . message3 message3 message3 message3'
         '. . . . . . chef7 chef7 message3 message3 message3 message3'
     ;
+    overflow: unset;
 }
 #polaroid-test-chef-1{
     grid-area: chef1;
@@ -525,6 +526,7 @@ header.grid-container{
             'message2 message2 message2 message2 sakuraFlower2 sakuraFlower2'
             'chef2 chef2 message3 message3 message3 message3'
         ;
+        overflow: hidden;
     }
     #test-desc{
         position: unset;

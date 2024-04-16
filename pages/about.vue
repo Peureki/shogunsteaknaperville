@@ -4,26 +4,26 @@
         <img id="header-sakura-flower" :src="SakuraFlower1" alt="Sakura flower" title="Sakura flower">
         <Polaroid
             id="header-polaroid"
-            :src="Chef1"
-            alt="Hibachi chef cooking with high flames" 
-            title="Hibachi chef cooking with high flames"
+            :src="Wall"
+            alt="Restaurant wall decorated with polaroid pictures of happy customers" 
+            title="Restaurant wall decorated with polaroid pictures of happy customers"
         />
     </section>
 
     <section class="grid-container" id="about">
         <Polaroid
             id="about-polaroid"
-            :src="Chef1"
+            :src="Chef"
             alt="Hibachi chef cooking with high flames" 
             title="Hibachi chef cooking with high flames"
         />
 
         <Description
             id="about-desc"
-            title="Something about us"
+            title="Shogun Japanese Steakhouse"
             :description="[
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+                'Welcome to Shogun Japanese Steakhouse, where tradition meets innovation since 1983. Nestled in the heart of Naperville along Route 59, our hibachi haven has been a beloved culinary destination for over four decades. At Shogun, we pride ourselves on offering a unique twist on Japanese Hibachi cuisine. Our skilled chefs expertly blend traditional Japanese cooking techniques with modern flair, creating an unforgettable dining experience that delights both the palate and the senses.',
+                'One of the secrets to our signature flavors lies in our homemade sauces, crafted right here in our kitchen. Each sauce is meticulously prepared using the finest ingredients, ensuring a perfect balance of taste and texture that enhances every dish.'
             ]"
         />
     </section>
@@ -31,17 +31,17 @@
     <section class="grid-container" id="about-2">
         <Polaroid
             id="about-2-polaroid"
-            :src="Chef1"
-            alt="Hibachi chef cooking with high flames" 
-            title="Hibachi chef cooking with high flames"
+            :src="Bar"
+            alt="Bar area of the restaurant with a japanese samarui and sakura flowers" 
+            title="Bar area of the restaurant with a japanese samarui and sakura flowers"
         />
 
         <Description
             id="about-2-desc"
-            title="Something about us"
+            title="Family Tradition"
             :description="[
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+                'More than just a restaurant, Shogun Japanese Steakhouse is a testament to family tradition. From our humble beginnings in 1983, we have remained a tight-knit family business, passing down our passion for food and hospitality from one generation to the next. When you dine with us, you\'re not just a customer – you\'re part of our extended family. ',
+                'Whether you\'re celebrating a special occasion or simply craving an exquisite meal, we invite you to experience the warmth, charm, and culinary mastery that define Shogun Japanese Steakhouse. Come join us at our table and discover the magic of our take on Japanese cuisine, crafted with love and tradition since day one.'
             ]"
         />
     </section>
@@ -50,7 +50,9 @@
 <script setup>
 import SakuraFlower1 from "~/assets/svgs/sakura-flower-1.svg"
 
-import Chef1 from "~/assets/imgs/chef-5.webp"
+import Wall from "~/assets/imgs/wall-2.webp"
+import Bar from "~/assets/imgs/restaurant-2.webp"
+import Chef from "~/assets/imgs/chef-1.webp"
 
 import Logo1 from '~/assets/imgs/logo-1.webp'
 
