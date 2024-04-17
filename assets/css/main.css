@@ -125,7 +125,8 @@ li > a:focus, .cta-hover:focus{
     grid-column-gap: var(--gap-grid-column);
     grid-row-gap: var(--gap-grid-row);
     padding-inline: var(--padding-page);
-    overflow: hidden; /* Prevent page from overflowing to the right due to the absolute elements (ie sakura branches) */
+    /* overflow: hidden; Prevent page from overflowing to the right due to the absolute elements (ie sakura branches) */
+
 }
 section.grid-container{
     padding-block: var(--padding-section-grid);
