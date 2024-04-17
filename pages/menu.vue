@@ -468,6 +468,7 @@ useSeoMeta({
         'wine wine wine wine wine wine beer beer beer beer beer beer'
         'polaroid polaroid polaroid polaroid . . beer beer beer beer beer beer'
         'polaroid polaroid polaroid polaroid . . . . . . . sakura'
+        'polaroid polaroid polaroid polaroid . . . . . . . .'
     ;
 }
 #wine-by-glass{
@@ -483,6 +484,7 @@ useSeoMeta({
 #wine-and-beer-sakura-branch{
     grid-area: sakura;
     position: absolute;
+    top: 0;
     right: calc(var(--padding-page) * -1);
     width: var(--w-sakura-branch-small);
 }
@@ -495,9 +497,8 @@ useSeoMeta({
     #wine-and-beer{
         grid-template-areas: 
             'wine wine wine wine wine wine'
-            'polaroid polaroid polaroid . . .'
+            'polaroid polaroid polaroid . . sakura'
             'beer beer beer beer beer beer'
-            '. . . . . sakura'
         ;
     }
 }
