@@ -3,6 +3,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
   plugins: [{src: '~/plugins/google-recaptcha.ts'}],
+  modules: ['nuxt-gtag'],
+  gtag: {
+    id: 'G-03V4X9JQ5E',
+  },
   app: {
     head: {
       htmlAttrs: {
