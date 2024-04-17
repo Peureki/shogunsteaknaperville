@@ -129,7 +129,7 @@ const sendEmail = async () => {
 
     const token = await recaptchaInstance?.executeRecaptcha('validate_captcha');
 
-    emailjs.sendForm('service_9uaa68k', 'template_eq1t5zc', form.value, {
+    emailjs.sendForm('service_9hh11zj', 'template_lnxsn6a', form.value, {
         publicKey: '_QxZZf81pHW_5-jqB',
         'g-recaptcha-response': token
     })
