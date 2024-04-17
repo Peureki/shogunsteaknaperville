@@ -28,7 +28,7 @@ let phone = ref('6304160871'),
     formattedPhone = formatPhoneNumber(phone.value);
 
 const checkCtaTo = computed(() => {
-    return props.ctaTo !== 'phone' ? props.ctaTo : `tel:1${phone}`; 
+    return props.ctaTo !== 'phone' ? props.ctaTo : `tel:+1${phone.value}`; 
 })
 
 </script>
