@@ -22,6 +22,8 @@
 
         <NuxtLink class="cta" id="pdf" to="/Shogun_Menu.pdf" target="_blank">View PDF Menu</NuxtLink>
 
+        <p id="header-tip">20% Gratuity added to parties of 5 or more. 18% may be added for quality service.</p>
+
         <div class="anchor-container">
             <Anchor to="entrees" name="Entrees"/>
             <Anchor to="dinner-for-two" name="Dinner For Two"/>
@@ -48,11 +50,11 @@
             desc="Dinners include shrimp appetizer, soup, salad, vegetable, steamed rice, noodles (fried rice $3.00 or extra noodles $4.00 additional charge). Extra egg yolk or french garlic sauce $3.00"
             :items="[
                 ['Chicken Teriyaki', false, '$19.95'],
-                ['Glazed Honey Chicken', '(spicy)', '$19.95'],
+                ['Glazed Honey Chicken', 'spicy', '$19.95'],
                 ['Hibachi Sirloin Steak', false, '$24.95'],
                 ['Filet Mignon', false, '$28.95'],
                 ['Sesame Scallops', false, '$28.95'],
-                ['Shrimp', '(egg yolk, french garlic, or hibachi)', '$24.95'],
+                ['Shrimp', 'egg yolk, french garlic, or hibachi', '$24.95'],
                 ['Salmon Teriyaki', false, '$24.95'],
                 ['Calamari Teriyaki', false, '$24.95'],
                 ['Vegetable Dinner', false, '$19.95']
@@ -304,7 +306,9 @@ useSeoMeta({
         'anchor anchor anchor anchor koi koi . . polaroid polaroid polaroid polaroid'
         'anchor anchor anchor anchor koi koi . . . . . .'
         'anchor anchor anchor anchor koi koi . . . . . .'
+        'tip tip tip tip . . . . . . . .'
         'pdf pdf pdf pdf . . . sakuraFlower . . . . '
+        
     ;
 }
 #header-title{
@@ -325,6 +329,10 @@ useSeoMeta({
     grid-area: pdf;
     font-size: var(--font-size-h5);
 }
+#header-tip{
+    grid-area: tip;
+    font-size: var(--font-size-tip);
+}
 .anchor-container{
     grid-area: anchor;
 }
@@ -340,6 +348,7 @@ useSeoMeta({
            'polaroid polaroid polaroid polaroid . .'
            'polaroid polaroid polaroid polaroid . sakuraFlower'
            'anchor anchor anchor anchor anchor anchor'
+           'tip tip tip tip tip tip'
            'pdf pdf pdf pdf pdf pdf'
         ;
     }
