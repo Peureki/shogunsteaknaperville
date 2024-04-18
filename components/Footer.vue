@@ -165,6 +165,7 @@ a#peu{
         ;
         grid-column-gap: unset;
         grid-row-gap: 20px;
+        justify-items: start;
     }
     .copyright{
         flex-direction: row-reverse;
