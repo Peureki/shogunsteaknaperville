@@ -47,7 +47,7 @@
         <MenuList
             id="entrees"
             title="Entrees"
-            desc="Dinners include shrimp appetizer, soup, salad, vegetable, steamed rice, noodles (fried rice $3.00 or extra noodles $4.00 additional charge). Extra egg yolk or french garlic sauce $3.00"
+            desc="Dinners include shrimp appetizer, soup, salad, vegetables, steamed rice, noodles (fried rice $3.00 or extra noodles $4.00 additional charge). Extra egg yolk or french garlic sauce $3.00"
             :items="[
                 ['Chicken Teriyaki', false, '$19.95'],
                 ['Glazed Honey Chicken', 'spicy', '$19.95'],
@@ -156,7 +156,7 @@
                 ['Steak', false, '$9.00'],
                 ['Chicken', false, '$9.00'],
                 ['Filet Mignon', false, '$11.00'],
-                ['Shrimp', 'Egg yolk, french garlic, or hibachi', '$9.00'],
+                ['Shrimp', 'egg yolk, french garlic, or hibachi', '$9.00'],
                 ['Sea Scallops', false, '$10.00'],
                 ['Lobster', '8oz', '$28.00'],
             ]"
@@ -408,6 +408,10 @@ useSeoMeta({
         'polaroid polaroid polaroid polaroid . . combo combo combo combo combo combo'
         'polaroid polaroid polaroid polaroid sakura . combo combo combo combo combo combo'
     ;
+}
+/* Specific combo name ie. 'and Steak' */
+.combo{
+    white-space: nowrap;
 }
 #dinner-for-two{
     grid-area: forTwo;
