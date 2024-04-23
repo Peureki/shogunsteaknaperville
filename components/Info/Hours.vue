@@ -4,7 +4,7 @@
         <ul class="hours">
             <li><p>Monday</p><p>Closed</p></li>
             <li><p>Tuesday</p><p>Closed</p></li>
-            <li><p>Wednesday</p><p>1-3PM, 4-30:9PM</p></li>
+            <li><p>Wednesday</p><p>1-3PM, 4:30-9PM</p></li>
             <li><p>Thursday</p><p>1-3PM, 4:30-9PM</p></li>
             <li><p>Friday</p><p>1-3PM, 4:30-9PM</p></li>
             <li><p>Saturday</p><p>1-9PM</p></li>
