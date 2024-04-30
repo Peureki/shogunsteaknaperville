@@ -114,7 +114,6 @@
             :src="Chef5"
             alt="Chef casting fire on the grill"
             title="Chef casting fire on the grill"
-            height="15"
         />
 
         <img id="test-sakura-flower-1" src="~/assets/svgs/sakura-flower-1.svg" alt="Sakura flower" title="Sakura flower">
@@ -124,7 +123,6 @@
             :src="Onion2"
             alt="Onion volcano"
             title="Onion volcano"
-            height="15"
         />
         <Polaroid
             id="polaroid-test-chef-3"
@@ -533,7 +531,7 @@ header.grid-container{
         top: unset;
     }
     #polaroid-test-chef-1, #polaroid-test-chef-2{
-        height: 50vw;
+        height: 30vw;
     }
     #polaroid-test-chef-3, #polaroid-test-chef-4, #polaroid-test-chef-5, #polaroid-test-chef-6, #polaroid-test-chef-7{
         grid-area: unset;
