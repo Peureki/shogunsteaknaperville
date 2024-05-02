@@ -463,6 +463,7 @@ header.grid-container{
 }
 #polaroid-test-chef-1{
     grid-area: chef1;
+    height: 15vw;
 }
 #polaroid-test-chef-2{
     grid-area: chef2;
