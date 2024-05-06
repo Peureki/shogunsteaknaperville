@@ -45,6 +45,10 @@ const props = defineProps({
     flex-direction: column;
     gap: var(--gap-menu-row);
 }
+/* Specific combo name ie. 'and Steak' */
+.combo{
+    white-space: nowrap;
+}
 
 .food-row{
     display: grid;

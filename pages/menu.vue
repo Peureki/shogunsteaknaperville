@@ -409,10 +409,6 @@ useSeoMeta({
         'polaroid polaroid polaroid polaroid sakura . combo combo combo combo combo combo'
     ;
 }
-/* Specific combo name ie. 'and Steak' */
-.combo{
-    white-space: nowrap;
-}
 #dinner-for-two{
     grid-area: forTwo;
 }
