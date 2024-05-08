@@ -70,7 +70,7 @@ footer{
 .peu-other{
     color: var(--clr-faded-text);
 }
-a#peu{
+#peu{
     font-family: var(--font-family-karla);
     font-size: var(--font-size-p);
     font-weight: unset;
