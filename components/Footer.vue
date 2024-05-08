@@ -80,9 +80,9 @@ a#peu{
     position: relative;
     grid-template-areas: 
         'logo logo logo logo logo logo logo logo . . . .'
-        'hours hours hours hours location location location location . . . .'
-        'hours hours hours hours phone phone phone phone . . . .'
-        'hours hours hours hours socials socials socials socials . . . .'
+        'location location location location hours hours hours hours . . . .'
+        'phone phone phone phone hours hours hours hours . . . .'
+        'socials socials socials socials hours hours hours hours . . . .'
         'credits credits credits credits credits credits credits credits samurai samurai samurai samurai'
     ;
     padding-top: 50px;
