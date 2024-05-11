@@ -11,7 +11,7 @@
                 </svg>
                 <h1>gun</h1>
             </span>
-            <h4>Teppanyaki & Sushi</h4>
+            <h2>Teppanyaki & Sushi</h2>
         </span>
     </span>
 </template>

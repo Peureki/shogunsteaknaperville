@@ -2,7 +2,7 @@
     <!--
         *
         * 
-        * HEADER CONTAINER
+        * HERO CONTAINER
         *
         *
     -->

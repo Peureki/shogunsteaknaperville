@@ -32,7 +32,6 @@
                             <span class="peu-blue">dev</span>
                         </span>
                     </a>
-                    
                 </p>
             </div>
         </div>
@@ -155,7 +154,6 @@ footer{
 }
 .made-by{
     grid-area: made-by;
-    text-align: right;
 }
 @media screen and (max-width: 768px){
     .credits-container{

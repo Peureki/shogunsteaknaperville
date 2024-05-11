@@ -1,6 +1,6 @@
 <template>
     <div class="desc-container">
-        <h2 v-if="title">{{ title }}</h2>
+        <h3 v-if="title">{{ title }}</h3>
 
         <p v-for="(paragraph, index) in description" :key="index">{{ paragraph }}</p>
 
