@@ -326,7 +326,7 @@ useSeoMeta({
  *
  */
 @media screen and (max-width: 768px){
-    header.grid-container{
+    .grid-container#hero{
         grid-template-areas: 
             'logo logo logo logo logo logo'
             'polaroid1 polaroid1 polaroid1 sakura sakura sakura'
