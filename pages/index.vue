@@ -6,7 +6,7 @@
         *
         *
     -->
-    <header class="grid-container">
+    <section class="grid-container">
         <Polaroid 
             id="polaroid-1"
             :src="Chef1"
@@ -24,7 +24,7 @@
         <Logo id="logo"/>
 
         <img id="sakura" src="~/assets/svgs/sakura-3.svg" alt="Sakura tree branch" title="Sakura">
-    </header>
+    </section>
 
     <!--
         *
