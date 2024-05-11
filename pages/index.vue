@@ -6,7 +6,7 @@
         *
         *
     -->
-    <section class="grid-container">
+    <section class="grid-container" id="hero">
         <Polaroid 
             id="polaroid-1"
             :src="Chef1"
@@ -293,7 +293,7 @@ useSeoMeta({
  * HEADER SECTION
  *
  */
-header.grid-container{
+.grid-container#hero{
     position: relative;
     height: 100dvh; 
     padding-top: var(--padding-outside-nav);
