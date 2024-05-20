@@ -12,6 +12,7 @@
             :src="Chef1"
             alt="Hibachi chef cooking with high flames" 
             title="Hibachi chef cooking with high flames"
+            lazy="eager"
         />
 
         <Polaroid
@@ -19,6 +20,7 @@
             :src="Chef2"
             alt="Hibachi chef cooking with high flames" 
             title="Hibachi chef cooking with high flames"
+            lazy="eager"
         />
 
         <Logo id="logo"/>

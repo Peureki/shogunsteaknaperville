@@ -1,6 +1,6 @@
 <template>
     <div class="polaroid-container" :style="{height: `${polaroidHeight}vw`, transform: randomRotate}">
-        <img :src="src" :alt="alt" :title="title" loading="lazy"/>
+        <img :src="src" :alt="alt" :title="title" :loading="isLazyLoaded"/>
     </div>
 </template>
 
@@ -11,6 +11,7 @@ const props = defineProps({
     alt: String,
     title: String, 
     height: String,
+    lazy: String,
 })
 
 const randomRotate = ref(null),
@@ -26,8 +27,15 @@ onMounted(() => {
 // By default, polaroid w & h are 100% and follow the display:grid content size
 // But for polaroids that need a fixed w & h to fill space because there's no content, then display that custom w & h number
 const polaroidHeight = computed(() => {
-        return props.height == undefined ? '100%' : props.height;
-    })
+    return props.height == undefined ? '100%' : props.height;
+})
+// Define if any polaroid needs to be loaded eagerly or lazily
+// In pages => change any polaroids above the fold with property lazy="eager"
+const isLazyLoaded = computed(() => {
+    return props.lazy == 'eager' ? 'eager' : 'lazy';  
+})
+
+console.log(props.lazy);
 
 </script>
 

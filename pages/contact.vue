@@ -7,6 +7,7 @@
             :src="Front"
             alt="Hibachi Chef"
             title="Hibachi Chef"
+            lazy="eager"
         />
 
         <img id="header-sakura-flower" :src="SakuraFlower" alt="Sakura flower" title="Sakura flower">
