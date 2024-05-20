@@ -1,6 +1,6 @@
 <template>
     <div class="info-container">
-        <h5>Phone</h5>
+        <h4>Phone</h4>
         <a :href="`tel:+1${phone}`"><p class="cta-hover">{{ formattedPhone }}</p></a>
     </div>
 </template>

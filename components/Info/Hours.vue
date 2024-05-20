@@ -1,6 +1,6 @@
 <template>
     <div class="hours-container">
-        <h5>Hours</h5>
+        <h4>Hours</h4>
         <ul class="hours">
             <li><p>Monday</p><p>Closed</p></li>
             <li><p>Tuesday</p><p>Closed</p></li>
