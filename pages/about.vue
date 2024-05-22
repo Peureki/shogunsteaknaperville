@@ -7,7 +7,7 @@
             :src="Wall"
             alt="Restaurant wall decorated with polaroid pictures of happy customers" 
             title="Restaurant wall decorated with polaroid pictures of happy customers"
-            lazy="eager"
+            :is-above-the-fold="true"
         />
     </section>
 
@@ -17,7 +17,7 @@
             :src="Chef"
             alt="Hibachi chef cooking with high flames" 
             title="Hibachi chef cooking with high flames"
-            lazy="eager"
+            :is-above-the-fold="true"
         />
 
         <Description

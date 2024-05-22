@@ -14,7 +14,7 @@
             :src="HeaderChef"
             alt="Hibachi chef cooking with high flames" 
             title="Hibachi chef cooking with high flames"
-            lazy="eager"
+            :is-above-the-fold="true"
         />
 
         <img id="header-koi" :src="Koi1" alt="Koi" title="Koi">

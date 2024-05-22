@@ -1,6 +1,13 @@
 <template>
     <div class="polaroid-container" :style="{height: `${polaroidHeight}vw`, transform: randomRotate}">
-        <img :src="src" :alt="alt" :title="title" :loading="isLazyLoaded"/>
+        <img 
+            v-if="isAboveTheFold"
+            :src="src" :alt="alt" :title="title" loading="eager" rel="preload" as="image"
+        />
+        <img 
+            v-else
+            :src="src" :alt="alt" :title="title" loading="lazy"
+        />
     </div>
 </template>
 
@@ -12,6 +19,9 @@ const props = defineProps({
     title: String, 
     height: String,
     lazy: String,
+    // If img is above fold => preload, else lazy load
+    // Insert this only in <Polaroid/>s that are above the fold
+    isAboveTheFold: Boolean, 
 })
 
 const randomRotate = ref(null),
@@ -29,13 +39,6 @@ onMounted(() => {
 const polaroidHeight = computed(() => {
     return props.height == undefined ? '100%' : props.height;
 })
-// Define if any polaroid needs to be loaded eagerly or lazily
-// In pages => change any polaroids above the fold with property lazy="eager"
-const isLazyLoaded = computed(() => {
-    return props.lazy == 'eager' ? 'eager' : 'lazy';  
-})
-
-console.log(props.lazy);
 
 </script>
 
