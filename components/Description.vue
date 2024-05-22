@@ -4,11 +4,6 @@
 
         <p v-for="(paragraph, index) in description" :key="index">{{ paragraph }}</p>
 
-        <!-- <button v-if="ctaMessage && ctaTo" class="cta">
-            <NuxtLink v-if="ctaTo !== 'phone'" :to="ctaTo">{{ ctaMessage }}</NuxtLink>
-            <a v-else :href="`tel:+1${phone}`">{{ ctaMessage }}</a>
-        </button> -->
-
         <NuxtLink v-if="ctaMessage && ctaTo" class="cta" :to="checkCtaTo">
             {{ ctaMessage }}
         </NuxtLink>
@@ -24,8 +19,7 @@ const props = defineProps({
     ctaTo: String, 
 })
 
-let phone = ref('6304160871'),
-    formattedPhone = formatPhoneNumber(phone.value);
+let phone = ref('6304160871');
 
 const checkCtaTo = computed(() => {
     return props.ctaTo !== 'phone' ? props.ctaTo : `tel:+1${phone.value}`; 
